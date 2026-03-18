@@ -1,0 +1,32 @@
+meta {
+  name: migrateInvoiceDataFromExcel
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/migration/migrateInvoiceDataFromExcel
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:multipart-form {
+  file: @file(/Users/durgesh/Downloads/Spin Salon Amabttur Sales(in)_ORG.csv)
+  body: '''
+    {
+      "storeId": 50
+    "orgId": 42,
+    "staffId":58
+    }
+  '''
+}
+
+settings {
+  encodeUrl: true
+}

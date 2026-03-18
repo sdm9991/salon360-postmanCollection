@@ -1,0 +1,30 @@
+meta {
+  name: {{ip}}/sales/updateResource
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/sales/updateResource
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+              "resourceId": 1,
+              "name": "Room 11",
+              "description": "Room 11"
+          
+          }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: prepaidwallet Copy
+  type: http
+  seq: 66
+}
+
+post {
+  url: https://api.salon360app.com/api/sales/getAllActiveExpenses/0/10
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~id: 
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {"expenseCategoryName":null,"description":null,"paymentMode":null,"amount":null,"totalAmount":null,"balanceAmount":null,"expenseDate":null,"expenseCategoryId":131,"payModeId":null,"expenseId":null,"toDate":"2024-12-19","fromDate":"2024-12-18","payeeId":110,"entryType":null,"payeeType":null,"expenseType":null}
+}
+
+settings {
+  encodeUrl: true
+}

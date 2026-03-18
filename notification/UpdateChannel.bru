@@ -1,0 +1,30 @@
+meta {
+  name: UpdateChannel
+  type: http
+  seq: 20
+}
+
+patch {
+  url: {{ip}}/notification/channel/update
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "id":"1",
+  "name":"SMS",
+  "status":"ACTIVE"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,41 @@
+meta {
+  name: v2/updateCustomer
+  type: http
+  seq: 52
+}
+
+post {
+  url: {{ip}}/sales/v2/updateCustomer
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:multipart-form {
+  file: @file(/Users/sdmajumder/Desktop/Screenshot 2026-01-31 at 5.25.39 PM.png)
+  body: '''
+    {
+        "id":31258,
+        "countryId": 1,
+        "mobileNum": "8878787878",
+        "fName": "Durgesh",
+        "lName": "Patidar",
+        "gender": "Male",
+        "emailId": "durgesh.java@gmail.com",
+        "location": "Palava City",
+        "address": "Europa F 1804",
+        "sourceId": 1289,
+        "storeId":85,
+        "orgId":66
+    }
+  '''
+}
+
+settings {
+  encodeUrl: true
+}

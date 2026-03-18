@@ -1,0 +1,36 @@
+meta {
+  name: product/createProductTransfer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/inventory/product/createProductTransfer
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "toStoreId": 103,
+      "totalCost": 500,
+      "products": [
+          {
+              "productId": 177,
+              "transferQuantity": 2,
+              "cost": 500
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,36 @@
+meta {
+  name: getAppointmentDetails
+  type: http
+  seq: 56
+}
+
+post {
+  url: {{ip}}/sales/getAppointmentDetails
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~searchType: MOBILE
+  ~searchText: 1442
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "staffId": 142,
+      "calendarDate": "2025-09-29",
+      "dayWeek": "day",
+      "searchText": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+}

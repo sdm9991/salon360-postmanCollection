@@ -1,0 +1,59 @@
+meta {
+  name: updateNewSurveyWithSection-Admin
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{ip}}/survey/updateNewSurveyWithSection
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~sectionId: 2
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "surveyName": "Feedback Form",
+      "surveyDesc": "Feedback Form desc with section",
+  	"surveyId":2,
+      "sections": [
+          {
+              "sectionId": 5,
+              "questionIds": [
+                 19,20
+              ],
+               "order":5
+          }
+          ,
+          {
+              "sectionId": 2,
+              "questionIds": [
+                 16,17
+              ],
+               "order":2
+          },
+          {
+              "sectionId": 3,
+              "questionIds": [
+                 18,19
+              ],
+               "order":3
+          }
+          
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

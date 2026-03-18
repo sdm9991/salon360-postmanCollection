@@ -1,0 +1,27 @@
+meta {
+  name: {{ip}}/sales/paymentMode/populate
+  type: http
+  seq: 40
+}
+
+post {
+  url: {{ip}}/sales/paymentMode/populate
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "targetStoreId":148
+  }
+}
+
+settings {
+  encodeUrl: true
+}

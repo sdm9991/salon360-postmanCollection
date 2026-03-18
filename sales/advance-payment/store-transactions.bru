@@ -1,0 +1,31 @@
+meta {
+  name: store/transactions
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/sales/advancePayment/store/transactions/0/20
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "searchText": "",
+      "tenureStartDate": "2024-12-18",
+      "tenureEndDate": "2026-01-17",
+      "format": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

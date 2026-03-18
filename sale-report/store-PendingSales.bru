@@ -1,0 +1,31 @@
+meta {
+  name: store/PendingSales
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{ip}}/sales/report/store/PendingSales/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType" : "PRODUCT_SALES",
+      "tenureStartDate": "2024-09-10",
+      "tenureEndDate": "2025-09-11"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

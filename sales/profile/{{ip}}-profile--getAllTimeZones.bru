@@ -1,0 +1,34 @@
+meta {
+  name: {{ip}}/profile//getAllTimeZones
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{ip}}/profile/addStore
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: 2d1db9ed-fd88-4d5d-9bba-80b690f1edcf
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+     "id":85,
+     "shopName":"Durgesh Shop",
+     "addressLine1":"Indore, Madhya Pradesh, India",
+     "placeId":"ChIJ2w1BG638YjkR9EBiNdrEbgk",
+     "ytd":null,
+     "mtd":null,
+     "storeBalance":null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

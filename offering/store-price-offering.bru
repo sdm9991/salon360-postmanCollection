@@ -1,0 +1,25 @@
+meta {
+  name: store-price-offering
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/offering/fetch/store-price-offering
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}

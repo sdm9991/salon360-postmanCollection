@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/offering/add-group-master
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{ip}}/offering/add-group-master
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "groupName":"Hair Services",
+      "description":"Hair Services"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

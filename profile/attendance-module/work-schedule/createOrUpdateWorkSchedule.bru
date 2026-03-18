@@ -1,0 +1,49 @@
+meta {
+  name: createOrUpdateWorkSchedule
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/profile/attendance/createOrUpdateEmployee
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "employeeId": 215,
+      "workSchedule": [
+          {
+              "day": "MONDAY",
+              "startTime": "09:00:00",
+              "endTime": "17:00:00",
+              "status": "ACTIVE"
+          },
+          {
+              "day": "TUESDAY",
+              "startTime": "10:00:00",
+              "endTime": "18:00:00",
+              "status": "ACTIVE"
+          },
+          {
+              "day": "WEDNESDAY",
+              "startTime": "10:00:00",
+              "endTime": "18:00:00",
+              "status": "DEACTIVE"
+          }
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: migrateInvoiceDataFromSaleDetailExcel 2
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/migration/migrateInvoiceDataFromSaleDetailExcel
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:multipart-form {
+  file: @file(/Users/sdmajumder/Documents/Salondb/MIG_after22.csv)
+  body: '''
+    {
+      "storeId": 633,
+    "orgId": 393,
+    "staffId":5644
+    }
+  '''
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,33 @@
+meta {
+  name: {{ip}}/offering/delete
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{ip}}/offering/delete
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: 9d1a47f0-ff37-48b2-b783-72d7f2da623a
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+     "gender":"Male",
+     "storeId":122,
+     "service":{
+        "id":981,
+        "quantity":1
+     }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

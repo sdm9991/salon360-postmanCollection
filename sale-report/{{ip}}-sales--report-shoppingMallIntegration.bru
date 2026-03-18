@@ -1,0 +1,39 @@
+meta {
+  name: {{ip}}/sales//report/shoppingMallIntegration
+  type: http
+  seq: 67
+}
+
+post {
+  url: {{ip}}/sales/report/shoppingMallIntegration
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~id: 
+  ~pageNumber: 0
+  ~pageSize: 10
+}
+
+headers {
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  clientKey: 9116b12c-f46a-4667-818c-4e331358186a
+  clientSecret: 834dd435-1593-4c26-8dd5-d34ed3ac06be
+}
+
+body:json {
+  {
+      "reportType" : "SERVICE_SALES",
+      "tenureStartDate": "2026-03-13",
+      "tenureEndDate": "2026-03-13",
+      "storeId":85
+  
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

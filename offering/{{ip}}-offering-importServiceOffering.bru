@@ -1,0 +1,41 @@
+meta {
+  name: {{ip}}/offering/importServiceOffering
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/offering/importServiceOffering
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "offerings": [
+          {
+              "sgName": "22 April Durgesh P Group-Test Test Tedt",
+              "svcName": "Durgsh S",
+              "price": 500,
+              "gender": "Female"
+          },
+          {
+              "sgName": "22 April Durgesh P Group-Test Test Tedt",
+              "svcName": "Durgsh S-1",
+              "price": 1000,
+              "gender": "Female"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

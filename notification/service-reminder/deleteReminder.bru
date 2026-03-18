@@ -1,0 +1,32 @@
+meta {
+  name: deleteReminder
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/notification/service-reminder/deleteReminder
+  body: json
+  auth: none
+}
+
+params:query {
+  ~: 
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reminderRuleId":9
+  }
+}
+
+settings {
+  encodeUrl: true
+}

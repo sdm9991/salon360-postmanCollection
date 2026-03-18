@@ -1,0 +1,32 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/lead/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+  ~x-bs-session-id: {{x-bs-session-id}}
+}
+
+body:json {
+  {
+  
+      "name":"Test  Five",
+      "mobileNum":"+91-606404040",
+      "businessName":"Test  Five Salon",
+      "businessLocation": "Mumbai"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

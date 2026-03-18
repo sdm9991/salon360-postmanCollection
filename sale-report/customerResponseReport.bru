@@ -1,0 +1,32 @@
+meta {
+  name: customerResponseReport
+  type: http
+  seq: 60
+}
+
+post {
+  url: {{ip}}/sales/report/customerResponseReport/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType" : "SERVICE_SALES",
+      "tenureStartDate": "2024-03-04",
+      "tenureEndDate": "2024-03-04",
+      "staffId":null,
+      "surveyId":2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

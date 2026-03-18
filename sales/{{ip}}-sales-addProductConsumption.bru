@@ -1,0 +1,41 @@
+meta {
+  name: {{ip}}/sales/addProductConsumption
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{ip}}/sales/addProductConsumption
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "offeringDetails": [
+          {
+              "offeringId": 4862,
+              "saleDetailId": 23506,
+              "unitName": "ml",
+              "unitConsumed": 25.5
+          },
+          {
+              "offeringId": 9109,
+              "saleDetailId": 23505,
+              "unitName": "ml",
+              "unitConsumed": 30.0
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

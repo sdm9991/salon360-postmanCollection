@@ -1,0 +1,31 @@
+meta {
+  name: staffCommission
+  type: http
+  seq: 61
+}
+
+post {
+  url: {{ip}}/sales/report/staffCommission
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "STAFF_COMMISSION",
+      "month": null,
+      "tenureStartDate": "2025-11-09",
+      "tenureEndDate": "2025-12-11"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,33 @@
+meta {
+  name: products/export/1/10
+  type: http
+  seq: 31
+}
+
+post {
+  url: {{ip}}/inventory/products/export/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "query":"",
+  "category":"",
+  "subCategory":"",
+  "type":"",
+  "brand":"",
+  "qty":null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: {{ip}}/sales/updateCustomerPackage
+  type: http
+  seq: 25
+}
+
+post {
+  url: {{ip}}/sales/updateCustomerPackage
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "customerPkgMapId":36,
+      "expiryDate": "2025-03-28",
+      "updateReason": "Test"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

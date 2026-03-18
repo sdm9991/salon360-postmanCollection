@@ -1,0 +1,19 @@
+meta {
+  name: http://localhost:5006/session/create
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8082/session/create?sessionId=test12345
+  body: json
+  auth: none
+}
+
+params:query {
+  sessionId: test12345
+}
+
+settings {
+  encodeUrl: true
+}

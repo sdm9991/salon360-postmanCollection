@@ -1,0 +1,82 @@
+meta {
+  name: {{ip}}/sales/checkout
+  type: http
+  seq: 35
+}
+
+post {
+  url: {{ip}}/sales/checkout
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: 2d1db9ed-fd88-4d5d-9bba-80b690f1edcf
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "billAmt":1100.0,
+     "netAmt":1000.0,
+     "discount":100.0,
+     "discountByAmount":100,
+     "discountByPercent":null,
+     "paymentModeList":[
+        {
+           "id":11,
+           "name":"Cash",
+           "icon":"ic_cash.png",
+           "iconExt":"png",
+           "status":"ACTIVE",
+           "changedStatus":null,
+           "selected":true,
+           "amount":1000.0
+        }
+     ],
+     "services":[
+        {
+           "id":1089,
+           "svcName":"Hair Cut",
+           "description":"Hair Cut",
+           "price":100,
+           "netAmount":90.91,
+           "discountAmount":9.09,
+           "quantity":1,
+           "gender":"Male",
+           "artists":[
+              {
+                 "empId":114,
+                 "amount":90.91,
+                 "fName":"Imran Khan"
+              }
+           ]
+        },
+        {
+           "id":499,
+           "svcName":"New Test",
+           "description":"New Test",
+           "price":1000,
+           "netAmount":909.09,
+           "discountAmount":90.91,
+           "quantity":1,
+           "gender":"Male",
+           "artists":[
+              {
+                 "empId":153,
+                 "amount":909.09,
+                 "fName":"Jega P"
+              }
+           ]
+        }
+     ],
+     "salesId":534,
+     "editMode":false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

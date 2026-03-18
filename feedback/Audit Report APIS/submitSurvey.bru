@@ -1,0 +1,86 @@
+meta {
+  name: submitSurvey
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{ip}}/survey/submitSurvey
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      
+      "surveyId": 5,
+      "answers": [
+          {
+              "questionId": 9,
+              "questionName": "Franchise Partner",
+              "text": "Radiance Salon Group"
+          },
+          {
+              "questionId": 10,
+              "questionName": "Salon Manager",
+              "text": "Anjali Sharma"
+          },
+          {
+              "questionId": 11,
+              "questionName": "Salon Name",
+              "text": "Radiance Beauty Lounge"
+          },
+          {
+              "questionId": 12,
+              "questionName": "Salon Location",
+              "text": "Salt Lake City, Kolkata"
+          },
+          {
+              "questionId": 13,
+              "questionName": "Audit No",
+              "text": "AUD-2025-314"
+          },
+          {
+              "questionId": 14,
+              "questionName": "Audited By",
+              "text": "Rakesh Mehta"
+          },
+          {
+              "questionId": 15,
+              "questionName": "Emp Code",
+              "text": "EMP5682"
+          },
+          {
+              "questionId": 16,
+              "questionName": "Outside Area Clean",
+              "text": "Yes – well maintained with no visible litter"
+          },
+          {
+              "questionId": 17,
+              "questionName": "Front Facade Visibility/Clarity",
+              "text": "Clear signage with proper lighting"
+          },
+          {
+              "questionId": 18,
+              "questionName": "Cleanliness/Brightness of the Reception Area",
+              "text": "Reception is spotless and well-lit"
+          },
+          {
+              "questionId": 19,
+              "questionName": "Music As per the SOP",
+              "text": "Soft ambient playlist playing"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

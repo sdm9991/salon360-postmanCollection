@@ -1,0 +1,32 @@
+meta {
+  name: salesListDetailsReport
+  type: http
+  seq: 43
+}
+
+post {
+  url: {{ip}}/sales/report/salesDetailsList/0/20
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "SERVICE_SALES",
+      "tenureStartDate": "2025-09-01",
+      "tenureEndDate": "2025-12-15",
+      "storeId": null,
+      "format": "pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

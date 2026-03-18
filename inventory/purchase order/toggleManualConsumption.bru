@@ -1,0 +1,32 @@
+meta {
+  name: toggleManualConsumption
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/inventory/product/toggleManualConsumption?automaticFlagEnabled=true
+  body: json
+  auth: inherit
+}
+
+params:query {
+  automaticFlagEnabled: true
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "storeId":159
+  }
+}
+
+settings {
+  encodeUrl: true
+}

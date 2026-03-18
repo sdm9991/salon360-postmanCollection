@@ -1,0 +1,83 @@
+meta {
+  name: {{ip}}/sales/commission/profile/update
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/sales/commission/profile/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "cProfileId": 94,
+      // "cProfileSku": 6,
+      // "cProfileName": "13% commission",
+      //   "defaultCommissionValueType": {
+      //     "SERVICE": "VALUE/PERCENTAGE",
+      //     "PRODUCT": "VALUE/PERCENTAGE"
+      // },
+      "commProfileSlabs": [
+          {
+              "commProfileSlabId": 168,
+              "targetAmtFrom": 1,
+              "targetAmtTo": 1000,
+              "commissionRateType": "PERCENTAGE",
+              "commissionRate": 10
+          },
+          {
+              "commProfileSlabId": 169,
+              "targetAmtFrom": 1001,
+              "targetAmtTo": 2000,
+              "commissionRateType": "PERCENTAGE",
+              "commissionRate": 15
+          },
+          {
+              "targetAmtFrom": 2001,
+              "targetAmtTo": 5000,
+              "commissionRateType": "cPercentage",
+              "commissionRate": 20
+          }
+      ]
+      // "offerings": [
+      //     {
+      //         "profileOfferingMapId": 31,
+      //         "offeringId": 1
+      //     },
+      //     {
+      //         "profileOfferingMapId": 32,
+      //         "offeringId": 2
+      //     },
+      //     {
+      //         "profileOfferingMapId": 33,
+      //         "offeringId": 3
+      //     }
+      // ]
+      // "itemOfferings": [
+      //     {
+      //         "offeringId": 101,
+      //         "offeringTypeId": 1,
+      //         "commissionType": "PERCENT",
+      //         "commissionValue": 10
+      //     },
+      //     {
+      //         "offeringId": 102,
+      //         "offeringTypeId": 1,
+      //         "commissionType": "FLAT",
+      //         "commissionValue": 150
+      //     }
+      // ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

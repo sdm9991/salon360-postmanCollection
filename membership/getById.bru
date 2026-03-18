@@ -1,0 +1,22 @@
+meta {
+  name: getById
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ip}}/membership/getMembershipByIdAndSaleId/60/2324
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

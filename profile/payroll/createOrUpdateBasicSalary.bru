@@ -1,0 +1,41 @@
+meta {
+  name: createOrUpdateBasicSalary
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/profile/payroll/createOrUpdateBasicSalary
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "empId": 110,
+      "salaryMapId": null,
+      "ctcSalary": 10000,
+      "startDate": "2025-02-01",
+  
+      "date": null,
+      "status": null,
+      "year": null,
+      "month": null,
+      "paymentModeId": null,
+      "generatedDate": null,
+      "processedSalaryAmount": null,
+      "hourlyOvertimeRate": 101,
+         "monthlyAllowance":5000
+  }
+}
+
+settings {
+  encodeUrl: true
+}

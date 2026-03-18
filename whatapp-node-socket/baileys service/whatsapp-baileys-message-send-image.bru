@@ -1,0 +1,28 @@
+meta {
+  name: whatsapp-baileys/message/send-image
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/whatsapp-baileys/message/send-image
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+}
+
+body:json {
+  {
+      "sessionId": "85_e8ed1ef8-b942-49de-b0d6-09dabb3dacbe",
+      "to": "919372210593",
+      "imageUrl": "https://assets.salon360app.com/notification-template-images/Birthday%20month%20offer-16-06-2024-19-24-20.png",
+      "caption": "*Hello Durgesh,*\n\nThank you for visiting *Miracle Salon & Spa*. We hope you enjoyed your service.\n\n📄 *Invoice Details*\n▸ Invoice Number: 2024-94-3\n▸ Total Amount: Rs. 23,349\n\n🔗 [Download Invoice PDF](https://t.salon360api.com/344)\n⭐ [Rate Your Experience](https://t.salon360api.com/3443)\n\n_Simply tap any blue link to open_\n\nThank you,\nMiracle Salon & Spa"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

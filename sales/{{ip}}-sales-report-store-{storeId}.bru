@@ -1,0 +1,34 @@
+meta {
+  name: {{ip}}/sales/report/store/{storeId}
+  type: http
+  seq: 42
+}
+
+post {
+  url: {{ip}}/sales/membership/OfferCountStatus
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "membershipId":48,
+      "customerId":179,
+      "offerings":[
+          {
+              "offeringId":1648,
+              "membershipOfferingType":"SERVICE"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

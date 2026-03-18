@@ -1,0 +1,40 @@
+meta {
+  name: v2/createCustomer
+  type: http
+  seq: 50
+}
+
+post {
+  url: {{ip}}/sales/v2/createCustomer
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:multipart-form {
+  body: '''
+    {
+        "countryId": 1,
+        "mobileNum": "881779101",
+        "fName": "Durgesh",
+        "lName": "Patidar",
+        "gender": "Male",
+        "emailId": "durgesh.java@gmail.com",
+        "location": "Palava City",
+        "address": "Europa F 1804",
+        "sourceId": 1289,
+        "storeId":85,
+        "orgId":66
+    }
+  '''
+  file: @file(/Users/sdmajumder/Desktop/Screenshot 2026-01-31 at 5.25.39 PM.png)
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: CreateSegment
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/promotional/segment
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+          "segmentName": "Churned Customers",
+          "segmentCode": "CHURNED_CUSTOMERS",
+          "type": "GREETING"
+      }
+}
+
+settings {
+  encodeUrl: true
+}

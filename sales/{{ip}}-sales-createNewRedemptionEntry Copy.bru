@@ -1,0 +1,109 @@
+meta {
+  name: {{ip}}/sales/createNewRedemptionEntry Copy
+  type: http
+  seq: 24
+}
+
+post {
+  url: {{ip}}/sales/createNewRedemptionEntry
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "customerId": 344,
+      "membershipId": null,
+      "bookingDate": "2025-02-16 00:09:06",
+      "otp":9539,
+      "bookingType": "",
+      "frequency": "",
+      "endDate": "",
+      "requestType": "REDEMPTION",
+      "redeemPoints": null,
+      "rewardValue": 0,
+      "redeemedPrepaidValue": 0,
+       "serviceVOList": [
+          {
+              "artistShares": [
+                  {
+                      "empId": 215,
+                      "empName": "AB DE Villiers",
+                      "percentage": null,
+                      "selected": false
+                  }
+              ],
+              "discountPercent": 5,
+              "gender": null,
+              "price": null,
+              "quantity": 1,
+              "serviceId": 1648,
+              "serviceName": null,
+              "sku": 1648,
+              "staffId": null,
+              "startTime": null,
+              "strTime": null,
+              "taxGroupId": 1,
+              "total": null
+          }
+      ],
+      "packageVOList": [],
+      "productVOList": [],
+      "membershipVOList": [],
+      "prepaidWalletList": [
+          {
+              "prepaidWalletId": 9,
+              "prepaidName": null,
+              "prepaidValue": null,
+              "gender": null,
+              "staffId": null,
+              "startTime": null,
+              "strTime": null,
+              "quantity": 1,
+              "discountPercent": 0,
+              "total": null,
+              "sku": 9,
+              "artistShares": [
+                  {
+                      "empId": 142,
+                      "empName": "DDD P P",
+                      "percentage": null,
+                      "selected": false
+                  }
+              ]
+          }
+      ],
+      "bookingStatus": "NEW",
+      "bookingNotes": "",
+      "gender": null,
+      "name": null,
+      "total": null,
+      "discountByValue": null,
+      "discountByPercent": null,
+      "isPrepaidRedemption": false,
+      "tipArtistShares": [],
+      "paymode": [
+          {
+              "id": 11,
+              "icon": "ic_cash.png",
+              "iconExt": "png",
+              "status": "ACTIVE",
+              "amount": 5000,
+              "selected": null,
+              "name": "Cash"
+          }
+      ],
+      "sourceId": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,51 @@
+meta {
+  name: productMaster/create
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{ip}}/inventory/productMaster/create
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:multipart-form {
+  body: '''
+    {
+        "typeId": "1",
+    	"type":"Retail",
+        "description": "",
+        "productName": "Bonacure Conditioner 2",
+        "categoryId": "1",
+        "subCategoryId": "1",
+        "price": 590,
+        "cost": 500,
+        "taxType": "SGST",
+        "taxGroup": "",
+        "measurement": null,
+        "unit": "PIECE",
+        "unitSize": 1,  
+        "quantity": 50,
+    	"lowQuantity": 15,
+        "skuNumber": "SKU007",
+        "brandName": "dkdkdkd",
+        "date": null,
+        "expiryDate": null,
+        "hsnCode": "890123"
+    }
+    
+  '''
+  ~file: @file(/Users/durgesh/Downloads/Birthday month offer.png)
+}
+
+settings {
+  encodeUrl: true
+}

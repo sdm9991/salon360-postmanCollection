@@ -1,0 +1,28 @@
+meta {
+  name: getSaleServiceDetails
+  type: http
+  seq: 47
+}
+
+post {
+  url: {{ip}}/sales/getSaleServiceDetails/0/20
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "tenureStartDate": "2024-01-13",
+      "tenureEndDate": "2025-03-13"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

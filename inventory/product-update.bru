@@ -1,0 +1,48 @@
+meta {
+  name: product/update
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{ip}}/inventory/product/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "productId": 9924,
+      "imageUrl": "https://www.google.com",
+      "type": "Consumable",
+      "description": "test product description",
+      "productName": "test product name",
+      "category": "category",
+      "subCategory": "sub category",
+      "price": 230,
+      "cost": 250,
+      "taxType": "tex type",
+      "taxGroup": "tax Group",
+      "measurement": 12,
+      "unit": "KG",
+      "quantity": 1,
+      "lowQuantity": 1,
+      "skuNumber": "SKU-1234",
+      "brand": "Nirma",
+      "date": "2023-08-12",
+      "expiryDate": "2023-08-12",
+      "lotNumber": "11",
+      "hsnCode": 20203
+  }
+}
+
+settings {
+  encodeUrl: true
+}

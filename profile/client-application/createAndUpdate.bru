@@ -1,0 +1,33 @@
+meta {
+  name: createAndUpdate
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/profile/clientApplication/createAndUpdate
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      
+      "clientName": "new BS Store",
+      "id": 21,
+      "storeId":[
+          10,12,11
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

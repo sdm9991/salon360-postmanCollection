@@ -1,0 +1,33 @@
+meta {
+  name: updateQuestion
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/sales/updateQuestion
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "questionId": 5,
+      "questionName": "How satisfied are you with our services?--1",
+      "questionSubText": "",
+      "inputTypeId": 1,
+      "required" : "Y",
+      "questionOptions":[23]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

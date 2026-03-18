@@ -1,0 +1,21 @@
+meta {
+  name: getServicePriceByStore
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ip}}/offering/store-service-price/getServicePriceByStore
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+settings {
+  encodeUrl: true
+}

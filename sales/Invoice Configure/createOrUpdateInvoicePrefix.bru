@@ -1,0 +1,37 @@
+meta {
+  name: createOrUpdateInvoicePrefix
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/sales/invoice-prefixes/createOrUpdateInvoicePrefix
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "title": "test2",
+      "initial": "PINV",
+      "middle": "YY",
+      "separator": ".",
+      "leadingZeros": 1,
+      "isYearly": true,
+      "resetMonth": 4,
+      "resetDay": 15,
+      "isDefault": true,//true , or null
+      "isActive": false
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

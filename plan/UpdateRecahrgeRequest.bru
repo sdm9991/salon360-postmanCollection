@@ -1,0 +1,40 @@
+meta {
+  name: UpdateRecahrgeRequest
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{ip}}/plan/recharge/request/update
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:multipart-form {
+  body: '''
+    {
+       "requestId":114,
+       "offerId":1,
+       "status":"COMPLETED",
+       "comment":"2 nd recharge for Store 44 Payment completed",
+       "storePaymentDetails":[
+          {
+             "storeId":85,
+             "status":"COMPLETED"
+          }
+       ]
+    }
+  '''
+  file: @file(/Users/durgesh/Downloads/WhatsApp Image 2024-02-01 at 12.15.49 AM.jpeg)
+}
+
+settings {
+  encodeUrl: true
+}

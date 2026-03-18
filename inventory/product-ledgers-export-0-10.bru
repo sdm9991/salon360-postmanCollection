@@ -1,0 +1,34 @@
+meta {
+  name: product/ledgers/export/0/10
+  type: http
+  seq: 30
+}
+
+post {
+  url: {{ip}}/inventory/products/export/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "query":"",
+  "type":"",
+  "entryType":"",
+  "createdBy":"",
+  "startDate":"",
+  "endDate":"2022-09-01",
+  "storeId":null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

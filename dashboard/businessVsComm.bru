@@ -1,0 +1,30 @@
+meta {
+  name: businessVsComm
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/sales/dashboard/businessVsComm
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "tenureStartDate":"2023-11-11",
+      "tenureEndDate": "2023-11-15",
+      "months":6
+  }
+}
+
+settings {
+  encodeUrl: true
+}

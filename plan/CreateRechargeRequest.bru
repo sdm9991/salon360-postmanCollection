@@ -1,0 +1,29 @@
+meta {
+  name: CreateRechargeRequest
+  type: http
+  seq: 21
+}
+
+post {
+  url: {{ip}}/plan/recharge/request/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "planId":8,
+  "upgradeRequest":true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,33 @@
+meta {
+  name: rolePermissionMap/createAndUpdate
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/profile/rolePermissionMap/createAndUpdate
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "storeId":39,
+  "roleId":11,
+  "permissionIds":[
+  1,2,3
+  
+  ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

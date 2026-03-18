@@ -1,0 +1,64 @@
+meta {
+  name: migrateExpensesFromJson
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/migration/migrateExpensesFromJson
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  [
+      {
+    "expenseCategoryName": null,
+    "description": "Cleaning commission",
+    "paymentMode": null,
+    "amount": 1234,
+    "totalAmount": null,
+    "balanceAmount": null,
+    "expenseDate": "2025-08-14 21:46:57",
+    "expenseCategoryId": 9,
+    "payModeId": 13,
+    "expenseId": null,
+    "toDate": null,
+    "fromDate": null,
+    "payeeId": null,
+    "entryType": "EXPENSE",
+    "payeeType": "OTHER",
+    "expenseType": "OTHER",
+    "format": null
+  },
+      {
+    "expenseCategoryName": null,
+    "description": "Cleaning commission",
+    "paymentMode": null,
+    "amount": 1234,
+    "totalAmount": null,
+    "balanceAmount": null,
+    "expenseDate": "2025-08-14 21:46:57",
+    "expenseCategoryId": 9,
+    "payModeId": 13,
+    "expenseId": null,
+    "toDate": null,
+    "fromDate": null,
+    "payeeId": null,
+    "entryType": "EXPENSE",
+    "payeeType": "OTHER",
+    "expenseType": "OTHER",
+    "format": null
+  }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

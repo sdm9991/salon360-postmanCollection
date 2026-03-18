@@ -1,0 +1,33 @@
+meta {
+  name: transaction/update
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/sales/pettyCash/transaction/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "id":7,
+      "description":"Test email-Updated",
+      "pettyCashCategoryId": 3,
+      "amount": 2000,
+      "txnDate":"2024-09-24",
+      "referenceId":122
+  }
+}
+
+settings {
+  encodeUrl: true
+}

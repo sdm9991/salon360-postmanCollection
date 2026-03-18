@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/sales/getStaffBalanceReport
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{ip}}/sales/report/getStaffBalanceReport
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "tenureStartDate":"2024-09-01",
+      "tenureEndDate":"2024-09-29",
+      "payModeId":null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

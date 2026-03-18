@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/sales/cancelSalesEntry
+  type: http
+  seq: 27
+}
+
+post {
+  url: {{ip}}/sales/cancelSalesEntry
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "saleId": 7537,
+      "otp":"2982"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

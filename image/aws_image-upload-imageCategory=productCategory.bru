@@ -1,0 +1,30 @@
+meta {
+  name: aws_image/upload?imageCategory=productCategory
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/aws_image/upload?imageCategory=productCategory
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  imageCategory: productCategory
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:multipart-form {
+  file: @file(/Users/durgesh/Downloads/sale_report_17112025.png)
+}
+
+settings {
+  encodeUrl: true
+}

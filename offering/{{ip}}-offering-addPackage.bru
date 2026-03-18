@@ -1,0 +1,54 @@
+meta {
+  name: {{ip}}/offering/addPackage
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{ip}}/offering/addPackage
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "serviceList": [
+          {
+              "id": 1659,
+              "svcName": "Pp-tax-200",
+              "description": "Pp-tax-200",
+              "gender": "Both",
+              "price": 200,
+              "quantity": 1,
+              "groupId": 0,
+              "gst": false,
+              "selected": true,
+              "taxGroupId": 1,
+              "sku": 1659,
+              "isPrepaidWalletApplicable": false
+          }
+      ],
+      "packageName": "head massage",
+      "startDate": "2025-01-25",
+      "validityType": "MONTH",
+      "validityTypeValue": 2,
+      "discountType": "VALUE",
+      "discountValue": 12,
+      "discountPercent": 0,
+      "quantity": 0,
+      "taxList": [],
+      "taxId": 1,
+      "artistShares": []
+  }
+}
+
+settings {
+  encodeUrl: true
+}

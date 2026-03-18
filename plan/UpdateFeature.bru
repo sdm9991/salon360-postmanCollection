@@ -1,0 +1,32 @@
+meta {
+  name: UpdateFeature
+  type: http
+  seq: 14
+}
+
+patch {
+  url: {{ip}}/plan/feature/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+      {
+          "featureMasterid": 12,
+          "featureName": "Stock Management",
+          "isCommonFeature": false,
+          "order": 12,
+          "featureCode": "STOCK_MANAGEMENT"
+      }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,52 @@
+meta {
+  name: submitSurvey
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{ip}}/sales/submitSurvey
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "surveyId": 2,
+      "saleId": 1079,
+      "storeId": 139,
+      "answers": [
+          {
+              "questionId": 6,
+              "inputTypeId": 1,
+              "optionIds": [
+                  28
+              ]
+          },
+          {
+              "questionId": 7,
+              "inputTypeId": 2,
+              "optionIds": [
+                  29,
+                  30
+              ]
+          },
+          {
+              "questionId": 8,
+              "inputTypeId": 3,
+              "text": "Hello world"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

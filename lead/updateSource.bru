@@ -1,0 +1,30 @@
+meta {
+  name: updateSource
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{ip}}/lead/source/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "id": 3,
+      "name": "WEBSITE-1",
+      "status": "ACTIVE"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

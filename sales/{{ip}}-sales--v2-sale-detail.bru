@@ -1,0 +1,22 @@
+meta {
+  name: {{ip}}/sales//v2/sale-detail
+  type: http
+  seq: 33
+}
+
+get {
+  url: {{ip}}/sales//v2/sale-detail/9639
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

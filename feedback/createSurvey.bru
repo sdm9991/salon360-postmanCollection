@@ -1,0 +1,50 @@
+meta {
+  name: createSurvey
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/sales/createSurvey
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "surveyName": "Feedback Form",
+      "surveyDesc": "Feedback Form",
+      "sections": [
+          {
+              "sectionId": 11,
+              "questionIds": [
+                  6,
+                  7,
+                  8
+              ],
+               "order":1
+          },
+          {
+              "sectionId": 11,
+              "questionIds": [
+                  6,
+                  7,
+                  8
+              ],
+               "order":1
+          }
+          
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

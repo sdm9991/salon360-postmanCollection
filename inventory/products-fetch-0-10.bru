@@ -1,0 +1,31 @@
+meta {
+  name: products/fetch/0/10
+  type: http
+  seq: 21
+}
+
+post {
+  url: {{ip}}/inventory/products/fetch/0/10000
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "query": "",
+      "category": 1,
+      "subCategory": 3,
+      "stockStatus": "IN_STOCK" //OUT_OF_STOCK,LOW_STOCK,IN_STOCK
+  }
+}
+
+settings {
+  encodeUrl: true
+}

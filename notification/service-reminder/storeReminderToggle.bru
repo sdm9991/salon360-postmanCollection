@@ -1,0 +1,26 @@
+meta {
+  name: storeReminderToggle
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/notification/service-reminder/storeReminderToggle
+  body: json
+  auth: none
+}
+
+params:query {
+  ~storeId: 85
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

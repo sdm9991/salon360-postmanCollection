@@ -1,0 +1,55 @@
+meta {
+  name: createAndUpdate
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/profile/notification/settings/createAndUpdate
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "storeId": 85,
+      "userIds" : [48,111,112,123],
+      "notificationSettings": [
+          {
+              "templateId": 6,
+              "eventId": 1
+          },
+          {
+              "templateId": 21,
+              "eventId": 2
+          },
+          {
+              "templateId": 2,
+              "eventId": 3
+          },
+          {
+              "templateId": 2,
+              "eventId": 4
+          },
+          {
+              "templateId": 2,
+              "eventId": 5
+          },
+          {
+              "templateId": 23,
+              "eventId": 6
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

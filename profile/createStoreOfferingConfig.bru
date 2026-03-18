@@ -1,0 +1,32 @@
+meta {
+  name: createStoreOfferingConfig
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{ip}}/profile/createStoreOfferingConfig
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "offeringCode": "SERVICE",
+      "isArtistShare": false,
+      "isEditPrice":false,
+      "isTaxInclusive":true
+   
+  }
+}
+
+settings {
+  encodeUrl: true
+}

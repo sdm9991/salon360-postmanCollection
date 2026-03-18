@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/auth/sendOtp
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/auth/sendOtp
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-platform: 4.2.1
+  x-bs-app-version: Andriod
+  Content-Type: application/json
+  ~x-bs-session-id: 
+}
+
+body:json {
+  {
+      "mobileNo": "8055501073",
+      "flow": "login"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,31 @@
+meta {
+  name: dayClosingReport
+  type: http
+  seq: 44
+}
+
+post {
+  url: {{ip}}/sales/report/dayClosingReport
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "reportType": "SALES_LIST",
+      "tenureStartDate": "2024-09-10",
+      "tenureEndDate": "2024-09-21"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

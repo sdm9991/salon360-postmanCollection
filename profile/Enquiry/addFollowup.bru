@@ -1,0 +1,34 @@
+meta {
+  name: addFollowup
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/profile/enquiry/addFollowup
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "enquiryId": 18,
+    "followupDate": "2025-09-04 11:00:00",
+    "nextFollowupDate": "2025-09-07 14:00:00",
+    "followupNotes": "Updated follow-up after customer confirmed interest.",
+    "nextFollowupTime":"11:00:00",
+    "leadStatus": "CONVERTED" //  NEW, FOLLOW_UP, CONVERTED, CANCELLED
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

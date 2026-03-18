@@ -1,0 +1,31 @@
+meta {
+  name: product/fetch/masterData
+  type: http
+  seq: 33
+}
+
+post {
+  url: {{ip}}/inventory/product/fetch/masterData
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "firstName":"",
+  "mobileNo":"",
+  "emailId":"",
+  "companyName":""
+  }
+}
+
+settings {
+  encodeUrl: true
+}

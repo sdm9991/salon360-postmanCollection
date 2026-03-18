@@ -1,0 +1,40 @@
+meta {
+  name: CreateOffer
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{ip}}/plan/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "planName":"Test_Plan_8",
+  "planDescription":"Test plan description 5",
+  "planType":"BOOSTER_PACKS",
+  "planPrice":"1000",
+  "startDate":"2023-11-22",
+  "endDate":"",
+  "benifit":{
+  "smsCount":"200",
+  "waCount":"30",
+  "emailCount":"400",
+  "outletCount":"5"
+  },
+  "featureId":[2,5]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

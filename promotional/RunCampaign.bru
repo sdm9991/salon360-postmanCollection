@@ -1,0 +1,22 @@
+meta {
+  name: RunCampaign
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/promotional/campaign/run/PROMOTIONAL
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

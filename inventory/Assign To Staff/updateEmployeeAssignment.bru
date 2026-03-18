@@ -1,0 +1,31 @@
+meta {
+  name: updateEmployeeAssignment
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/inventory/product/updateEmployeeAssignment
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "id": 1,
+    "quantity": 10,
+    "lotNumber": "LOT-2026-002",
+    "notes": "Updated lot number"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

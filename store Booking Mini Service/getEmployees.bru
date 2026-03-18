@@ -1,0 +1,22 @@
+meta {
+  name: getEmployees
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/store-booking/getEmployees
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "storeId" : 85,
+      "orgId" : 66
+  }
+}
+
+settings {
+  encodeUrl: true
+}

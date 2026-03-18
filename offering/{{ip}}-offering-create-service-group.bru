@@ -1,0 +1,49 @@
+meta {
+  name: {{ip}}/offering/create-service-group
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/offering/create-service-group
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "sgName": "3 march 2025 Hair",
+      "description": "XYZ",
+      "serviceList": [
+          {
+              "svcName": "Durgsh S",
+              "description": "Hair Cut-Large-11",
+              "price": 500,
+              "quantity": 1,
+              "gst": true,
+              "gender": "Female"
+          }
+      ],
+      "products": [
+          {
+              "productId": 1,
+              "volume": 30
+          },
+          {
+              "productId": 5,
+              "volume": 30
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

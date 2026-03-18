@@ -1,0 +1,34 @@
+meta {
+  name: {{ip}}/sales/advancePayment/createCreditAndDebitEntry
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/sales/advancePayment/createCreditAndDebitEntry
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "customerId":179, 
+     "referenceId":111,
+     "referenceType":"BOOKING_ADVANCE",
+     "amount":33.33,
+     "transactionType":"CREDIT",
+     "notes":"Advance payment paid for booking",
+     "paymentModeId":11
+  }
+}
+
+settings {
+  encodeUrl: true
+}

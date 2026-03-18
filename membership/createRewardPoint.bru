@@ -1,0 +1,42 @@
+meta {
+  name: createRewardPoint
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/membership/rewardpoints/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "rewardPointSystemEnabled": true,
+      "rewardPointCategoryDetailsMap": {
+          "REWARD_POINTS_FOR_PACKAGES": true,
+          "REWARD_POINTS_FOR_TAX": true,
+          "REWARD_POINTS_FOR_MEMBERSHIP": true,
+          "REWARD_POINTS_FOR_SERVICES": true,
+          "REWARD_POINTS_FOR_MEMBERSHIP_CUSTOMER": true,
+          "REWARD_POINTS_FOR_GIFT_VOUCHER": false,
+          "REWARD_POINTS_FOR_PRODUCTS": false,
+          "ROUND_OFF_POINTS": false
+      },
+      "assignedRewardPointValue": 120,
+      "assignedRewardPointOnEach": 12,
+      "valuePerRewardPointInRs": 12,
+      "minPointsEligibleForRedemption": 12
+  }
+}
+
+settings {
+  encodeUrl: true
+}

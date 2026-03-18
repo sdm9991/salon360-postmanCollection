@@ -1,0 +1,32 @@
+meta {
+  name: sales/createAndUpdateTaxMaster
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/sales/createAndUpdateTaxMaster
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "taxId":null,
+      "taxName":"CGST 2.5%",
+      "taxPercentage":2.5,
+      "orgId":119,
+      "storeId":159
+  }
+}
+
+settings {
+  encodeUrl: true
+}

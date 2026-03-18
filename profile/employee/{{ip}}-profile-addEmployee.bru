@@ -1,0 +1,33 @@
+meta {
+  name: {{ip}}/profile/addEmployee
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/profile/addEmployee
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  ~body: 
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:multipart-form {
+  body: '''
+    
+    {"fName":"Akon","lName":"Kimmi","mobileNumber":"6363545483","addressLine1":"India","id":249,"login":"YES","selectedStores":[85],"cProfiles":[],"appointmentEnable":true,"payrollEnable":true,"workSchedule":[{"day":"TUESDAY","startTime":"9:00","endTime":"21:00","status":"ACTIVE"},{"day":"WEDNESDAY","startTime":"9:00","endTime":"21:00","status":"ACTIVE"},{"day":"THURSDAY","startTime":"9:00","endTime":"21:00","status":"ACTIVE"},{"day":"FRIDAY","startTime":"9:00","endTime":"21:00","status":"ACTIVE"},{"day":"SATURDAY","startTime":"9:00","endTime":"21:00","status":"ACTIVE"}],"isShown":true,"ctcSalaryList":[],"selected":false,"profilePhotoUrl":"","externalEmpId" :"abc"}
+  '''
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: role/create
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/profile/role/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+       "storeId":43,
+       "roleName": "Artist"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

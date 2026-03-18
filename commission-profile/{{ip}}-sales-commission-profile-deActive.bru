@@ -1,0 +1,34 @@
+meta {
+  name: {{ip}}/sales/commission/profile/deActive
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/sales/commission/profile/deActive/4
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+  "cProfileName": "Monthly 10% Commission",
+  "targetAmt":15000,
+  "cPercentage":15,
+  "offerings":[
+      1,
+      2
+  ]
+      
+  }
+}
+
+settings {
+  encodeUrl: true
+}

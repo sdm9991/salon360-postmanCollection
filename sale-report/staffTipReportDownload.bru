@@ -1,0 +1,31 @@
+meta {
+  name: staffTipReportDownload
+  type: http
+  seq: 37
+}
+
+post {
+  url: {{ip}}/sales/report/staffTipReportDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "STAFF_TIP",
+      "tenureStartDate": "2024-01-28",
+      "tenureEndDate": "2025-04-29",
+      "format": "image"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

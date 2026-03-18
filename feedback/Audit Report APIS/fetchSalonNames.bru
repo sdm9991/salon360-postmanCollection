@@ -1,0 +1,26 @@
+meta {
+  name: fetchSalonNames
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ip}}/survey/fetchSalonNames
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~sectionId: 2
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

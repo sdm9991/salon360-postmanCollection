@@ -1,0 +1,22 @@
+meta {
+  name: prepaid-wallet/getAll Copy
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{ip}}/whatsapp-node/qr/http://localhost:8081/qr/3a0346f1-3cd5-418f-812e-d8e3df1796cf
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

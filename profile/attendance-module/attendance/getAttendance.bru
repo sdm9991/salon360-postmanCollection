@@ -1,0 +1,31 @@
+meta {
+  name: getAttendance
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{ip}}/profile/attendance/getAttendance?pageNumber=1&pageSize=10&isReport=true&startDate=2024-12-01&endDate=2025-12-31
+  body: json
+  auth: inherit
+}
+
+params:query {
+  pageNumber: 1
+  pageSize: 10
+  isReport: true
+  startDate: 2024-12-01
+  endDate: 2025-12-31
+  ~empId: 215
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

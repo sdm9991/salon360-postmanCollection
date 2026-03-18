@@ -1,0 +1,48 @@
+meta {
+  name: importCustomerPrepaidData
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/sales/importCustomerPrepaidWalletData
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+  "storeId": 626,
+  "orgId": 390,
+      "customers": [
+  {"mobileNum": "9538083802", "fName": "asha", "customerPrepaidBalance": "3790", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9620371813", "fName": "john", "customerPrepaidBalance": "1650", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "7022539725", "fName": "chandru", "customerPrepaidBalance": "9300", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9343539021", "fName": "deepak", "customerPrepaidBalance": "35740", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9740347099", "fName": "swathi", "customerPrepaidBalance": "6560", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9900230599", "fName": "rakesh bn", "customerPrepaidBalance": "43240", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9742416492", "fName": "namratha", "customerPrepaidBalance": "78299", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9513327777", "fName": "gouda", "customerPrepaidBalance": "10200", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9164510760", "fName": "sarath", "customerPrepaidBalance": "3000", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9900096239", "fName": "praveen", "customerPrepaidBalance": "11300", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9886613129", "fName": "tilak", "customerPrepaidBalance": "12500", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "8277494617", "fName": "sushmavara", "customerPrepaidBalance": "5000", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9972735136", "fName": "santosh", "customerPrepaidBalance": "1350", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9964421858", "fName": "monisha", "customerPrepaidBalance": "1050", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9886884819", "fName": "chetan", "customerPrepaidBalance": "4900", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "9972804445", "fName": "rishika", "customerPrepaidBalance": "5850", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "8088540995", "fName": "likhitha", "customerPrepaidBalance": "19450", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"},
+  {"mobileNum": "8971300661", "fName": "rashmi", "customerPrepaidBalance": "13500", "customerPrepaidWalletName": "PACKAGE 10000", "customerPrepaidWalletExpiryDate": "2035-01-08"}
+      ]   
+  }
+}
+
+settings {
+  encodeUrl: true
+}

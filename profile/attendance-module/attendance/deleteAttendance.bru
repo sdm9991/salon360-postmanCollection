@@ -1,0 +1,36 @@
+meta {
+  name: deleteAttendance
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/profile/attendance/deleteAttendance/90
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Generated from cURL: curl --location 'http://localhost:8765/api/profile/attendance/deleteAttendance/23' \
+  --header 'x-bs-session-id: 7e5873fe-0ff9-42cf-b818-91df176d1a13' \
+  --header 'x-bs-platform: Android' \
+  --header 'x-bs-app-version: 4.2.1' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  
+      "shifts": [
+         8
+      ]
+  }'
+}

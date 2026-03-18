@@ -1,0 +1,22 @@
+meta {
+  name: fetchAllCountry
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{ip}}/store-booking/fetchAllCountry
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "storeId" : 85,
+      "orgId" : 66
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,22 @@
+meta {
+  name: stores
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/store-booking/getStores
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "storeId" : 85,
+      "orgId" : 66
+  }
+}
+
+settings {
+  encodeUrl: true
+}

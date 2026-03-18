@@ -1,0 +1,21 @@
+meta {
+  name: {{ip}}/offering/fetch
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{ip}}/offering/fetch
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+settings {
+  encodeUrl: true
+}

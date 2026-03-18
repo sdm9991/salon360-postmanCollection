@@ -1,0 +1,29 @@
+meta {
+  name: sales/fetchTaxMasterConfig
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/sales/fetchTaxMasterConfig
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "orgId": 66,
+      "storeId": 85
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,69 @@
+meta {
+  name: send appointment
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://graph.facebook.com/v18.0/243475868838482/messages
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer EAAMsDSzfCtUBO3iMG2r08xvJE5x0wddN4scvwA3mmYz4NVSatFRuEJxBTJ7F2ldJxFUpIcIkdZC3aKW7THlwqtaU6o2LuxRQhvvNKeFCzZCAZAANFLPTzylCBGMos54IuipGGa5ntgnScMaJWe6rG74Ay2wZCo4p2j6qVcbpqPKME8wwunbifBsknZCenHd2XrgZDZD
+  ~Content-Type: application/json
+}
+
+body:json {
+  {
+      "messaging_product": "whatsapp",
+      "to": "918055501073",
+      "type": "template",
+      "template": {
+          "name": "invoice_store_id_422_template_prod",
+          "language": {
+              "code": "en"
+          },
+          "components": [
+              {
+                  "type": "header",
+                  "parameters": [
+                      {
+                          "type": "image",
+                          "image": {
+                              "link": "https://assets.salon360app.com/notification-template-images/INFLUENCE LOGO_page-0001-23-01-2026-17-31-49.jpg"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "type": "body",
+                  "parameters": [
+                      {
+                          "type": "text",
+                          "text": "Rupali"
+                      },
+                      {
+                          "type": "text",
+                          "text": "Body Scrub"
+                      },
+                      {
+                          "type": "text",
+                          "text": "04-Feb-2026 4:15 PM"
+                      },
+                       {
+                          "type": "text",
+                          "text": "04-Feb-2026 4:15 PM"
+                      }
+                     
+                  ]
+              }
+          ]
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

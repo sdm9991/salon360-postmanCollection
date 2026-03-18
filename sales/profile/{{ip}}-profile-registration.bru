@@ -1,0 +1,38 @@
+meta {
+  name: {{ip}}/profile/registration
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/profile/registration
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: 2d1db9ed-fd88-4d5d-9bba-80b690f1edcf
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "fName":"Durgesh New",
+     "mobileNo":"7878787848",
+     "emailId":"dpatidar@gmail.com",
+     "shopInfo":{
+        "shopName":"New Cut and Care",
+        "addressLine1":"Patna, Bihar, India",
+        "placeId":"ChIJBU8txTeZ8jkRcLIH9gUOGoM",
+        "ytd":null,
+        "mtd":null,
+        "storeBalance":null
+     }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,42 @@
+meta {
+  name: {{ip}}/sales/commission/profile/create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/sales/commission/profile/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "cascadingCommission": false,
+      "profileType": "ITEM",
+      "includeTaxIncentive": false,
+      "cProfileName": "sdm commssion 16 dec test",
+      "defaultCommissionValueType": {
+          "SERVICE": "VALUE/PERCENTAGE",
+          "PRODUCT": "VALUE/PERCENTAGE"
+      },
+      "itemOfferings": [
+          {
+              "offeringId": 2,
+              "offeringType": "SERVICE",
+              "commissionType": "VALUE",
+              "commissionValue": 20
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

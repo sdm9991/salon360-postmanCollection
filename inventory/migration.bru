@@ -1,0 +1,28 @@
+meta {
+  name: migration
+  type: http
+  seq: 37
+}
+
+post {
+  url: {{ip}}/inventory/product/migration?page=0&pageSize=500&storeId=85
+  body: json
+  auth: inherit
+}
+
+params:query {
+  page: 0
+  pageSize: 500
+  storeId: 85
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: customers/{customerId}/prepaidwallet/{id}
+  type: http
+  seq: 44
+}
+
+put {
+  url: {{ip}}/sales/customers/179/prepaidwallet/17
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "updateReason" : "test reason",
+      "validityInDays" : null,
+      "prepaidBalance": "200",
+      "endDate" : "2019-10-21T13:00+02:00"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

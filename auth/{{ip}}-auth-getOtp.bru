@@ -1,0 +1,26 @@
+meta {
+  name: {{ip}}/auth/getOtp
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{ip}}/auth/getOtp?mobileNo=8055501073
+  body: json
+  auth: inherit
+}
+
+params:query {
+  mobileNo: 8055501073
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

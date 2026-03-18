@@ -1,0 +1,46 @@
+meta {
+  name: CreatePlan
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{ip}}/plan/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+       {
+                    
+                      "planName": "SMS- 1000",
+                      "planDescription": "SMS- 1000",
+                      "planType": "SMS",
+                      "planValidityUOM": "BOOSTER",
+                      "planValidity": null,
+                      "planPrice": 350.0,
+                      "startDate": "2023-11-22T00:00:00.000+0000",
+                      "endDate": null,
+                      "status": "ACTIVE",
+                      "createdDate": null,
+                      "updatedDate": null,
+                      "benefit": {
+                          "smsCount": 1000,
+                          "waCount": null,
+                          "emailCount": null,
+                          "outletCount": null
+                      },
+                      "featureId": []
+                  }
+}
+
+settings {
+  encodeUrl: true
+}

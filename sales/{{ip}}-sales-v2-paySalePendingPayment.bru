@@ -1,0 +1,42 @@
+meta {
+  name: {{ip}}/sales/v2/paySalePendingPayment
+  type: http
+  seq: 29
+}
+
+post {
+  url: {{ip}}/sales/v2/paySalePendingPayment
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "saleId": 1412,
+    "paymode": [
+      {
+        "id": 13,
+        "amount": 1500,
+        "name": "GPay QR",
+        "note": "UPI ref 987654321"
+      },
+      {
+        "id": 16,
+        "amount": 500,
+        "name": "Card",
+        "note": "Card ending 4242"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

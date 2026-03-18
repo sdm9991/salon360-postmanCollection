@@ -1,0 +1,22 @@
+meta {
+  name: deleteFeature
+  type: http
+  seq: 17
+}
+
+delete {
+  url: {{ip}}/plan/feature/deactivate/22
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

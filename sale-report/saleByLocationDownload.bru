@@ -1,0 +1,31 @@
+meta {
+  name: saleByLocationDownload
+  type: http
+  seq: 55
+}
+
+post {
+  url: {{ip}}/sales/report/saleByLocationDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "SERVICE_SALES",
+      "tenureStartDate": "2022-03-03",
+      "tenureEndDate": "2023-03-04",
+      "format": "image"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

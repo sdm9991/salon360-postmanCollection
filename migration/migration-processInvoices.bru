@@ -1,0 +1,36 @@
+meta {
+  name: migration/processInvoices
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/migration/processInvoices
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+  
+  "storeId": 633,
+  "orgId": 393,
+  "staffId":5644,
+  // "taxGroupId":105,// 5%
+  "taxGroupId":104,// 18%
+  "fileName":"mig_remianingbefore22sep.csv",
+  "importStatus":"pending"
+      //file "Untitled spreadsheet - sale_list_with_bill(01-04-2025 to 30-04-2025) (1) (2).csv"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

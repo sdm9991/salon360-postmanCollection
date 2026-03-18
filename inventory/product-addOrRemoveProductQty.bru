@@ -1,0 +1,35 @@
+meta {
+  name: product/addOrRemoveProductQty
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/inventory/product/addOrRemoveProductQty
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "productId": 73,
+      "quantity": 10,
+      "transactionType": "IN",
+      "adjustedReasonCategory": "NEW_STOCK",
+      "adjustedReason": null,
+      "lotNumber": "12346",
+      "expiryDate": "2026-05-15",
+        "notes": "Received from supplier XYZ"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

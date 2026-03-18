@@ -1,0 +1,35 @@
+meta {
+  name: updateCalendarSettings
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/profile/calendar/updateCalendarSettings
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "defaultView": "Resource View",
+    "timeSlotInterval": 15,
+    "displayBusinessHours": true,
+    "allowDoubleBookingForStaff": true,
+    "allowDoubleBookingForResource": true,
+    "mandatoryResourceSelection": true,
+    "twentyFourHourFormat": true,
+    "intervalType": "CALENDAR_INTERVAL"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

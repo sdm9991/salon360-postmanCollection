@@ -1,0 +1,48 @@
+meta {
+  name: notification/send/campaign
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{ip}}/notification/send/campaign
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "campaignId":353,
+     "templateId":2,
+     "customers":[
+        {
+           "id":179,
+           "fName":"Durgesh",
+           "lName":"",
+           "mobileNum":"8055501073",
+           "emailId":""
+        }
+     ],
+     "templateData":{
+        "STORE_NAME":"Miracle Salon and Spa",
+        "DISCOUNT_PERCENTAGE":3.0,
+        "OFFER_START_DATE":"29 Jul 2025",
+        "OFFER_END_DATE":"31 Jul 2025",
+        "IMAGE_URL":"store-logo/157/BS-157.png",
+        "STORE_NUMBER":223
+     },
+     "campaignType":"PROMOTIONAL",
+     "storeId":85
+  }
+}
+
+settings {
+  encodeUrl: true
+}

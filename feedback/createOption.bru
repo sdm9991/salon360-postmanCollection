@@ -1,0 +1,39 @@
+meta {
+  name: createOption
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/sales/createOption
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "questionOptionNames" :[
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "Employee behaviour",
+          "Service Quality",
+          "Product Quality",
+          "Amenities",
+          "Others"
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

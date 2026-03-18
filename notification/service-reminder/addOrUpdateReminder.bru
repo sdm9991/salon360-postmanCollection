@@ -1,0 +1,65 @@
+meta {
+  name: addOrUpdateReminder
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/notification/service-reminder/addOrUpdateReminder
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reminderRuleId": 1,
+      "ruleName": "Hair cut monthly",
+      "services": [
+          1648,
+          1649
+      ],
+      "stopOnNextVisit": false,
+      "stopOnNextVisitForNextService": true,
+      "ruleType": "CUSTOM",
+      "intervals": [
+          {
+              "reminderInterval": 1,
+              "reminderSequence": "REMINDER_1"
+          },
+          {
+              "reminderInterval": 1,
+              "reminderSequence": "REMINDER_2"
+          },
+          {
+              "reminderInterval": 1,
+              "reminderSequence": "REMINDER_3"
+          },
+          {
+              "reminderInterval": 1,
+              "reminderSequence": "REMINDER_4"
+          },
+          {
+              "reminderInterval": 1,
+              "reminderSequence": "REMINDER_5"
+          }
+      ],
+      "reminderTime": "2025-11-18 09:00:00",
+      "notificationChannelIds": [
+          {
+              "channelId": "3",
+              "templateId": "25"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

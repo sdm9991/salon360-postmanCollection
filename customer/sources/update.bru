@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{ip}}/sales/customer/source/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "id": 8,
+      "name": "FB",
+      "storeId": 39
+  }
+}
+
+settings {
+  encodeUrl: true
+}

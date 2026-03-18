@@ -1,0 +1,28 @@
+meta {
+  name: {{ip}}/sales/advancePayment/cancelCreditAndDebitEntry
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{ip}}/sales/advancePayment/cancelCreditAndDebitEntry
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "id":32
+  }
+}
+
+settings {
+  encodeUrl: true
+}

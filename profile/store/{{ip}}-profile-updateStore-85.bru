@@ -1,0 +1,44 @@
+meta {
+  name: {{ip}}/profile/updateStore/85
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/profile/updateStore/85
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:multipart-form {
+  body: '''
+    {
+        "storeId": 85,
+        "shopName": "Durgesh Shop - Mig",
+        "addressLine1": "Bengaluru, Karnataka, India",
+    "openingTime":"10:13","closingTime":"16:13",
+        "invoiceNotificationEnabled": true,
+        "invoiceNotificationChannelId": 3,
+        "customFeedbackUrl": "https://mail.google.com/mail/u/1/#inbox",
+        "gstNumber": "45ABCDE1234X1Z5",
+        "websiteUrl": "www.google.com",
+        "instagramUrl": "https://www.instagram.com/example",
+        "facebookUrl": "https://www.facebook.com/example",
+        "xUrl": "https://twitter.com/example",
+        "linkedinUrl": "https://www.linkedin.com/in/example",
+        "googleMapUrl": "https://goo.gl/maps/example",
+        "emailId": "abc@gmail.com",   "enableServiceReminder":1
+    }
+  '''
+}
+
+settings {
+  encodeUrl: true
+}

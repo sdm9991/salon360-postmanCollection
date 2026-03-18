@@ -1,0 +1,32 @@
+meta {
+  name: productProfitLossSummary
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{ip}}/sales/report/productProfitLossSummary/0/20
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  
+      "tenureStartDate": "2025-01-03",
+      "tenureEndDate": "2026-03-03",
+      "reportType" : null
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

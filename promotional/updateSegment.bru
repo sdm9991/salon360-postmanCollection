@@ -1,0 +1,32 @@
+meta {
+  name: updateSegment
+  type: http
+  seq: 16
+}
+
+patch {
+  url: {{ip}}/promotional/segment
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+     {
+          "id": 11,
+          "segmentName": "Student offer (up to the age of 20)",
+          "segmentCode": "STUDENT_OFFER",
+          "status": "ACTIVE",
+          "type": "PROMOTIONAL"
+      }
+}
+
+settings {
+  encodeUrl: true
+}

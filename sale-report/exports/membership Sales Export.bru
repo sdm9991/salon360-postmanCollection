@@ -1,0 +1,30 @@
+meta {
+  name: membership Sales Export
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{ip}}/sales/report/membershipSalesExport
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "tenureStartDate" : "2023-10-11",
+      "tenureEndDate" : "2024-11-15"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

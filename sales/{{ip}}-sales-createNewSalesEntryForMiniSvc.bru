@@ -1,0 +1,78 @@
+meta {
+  name: {{ip}}/sales/createNewSalesEntryForMiniSvc
+  type: http
+  seq: 53
+}
+
+post {
+  url: {{ip}}/sales/createNewSalesEntryForMiniSvc
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "customerId": 179,
+      "membershipId": 48,
+      "remarks": "test remark 1",
+      "bookingDate": "2025-02-06 19:23:32",
+      "bookingType": "",
+      "frequency": "",
+      "endDate": null,
+      "requestType": "QUICK_SALE",
+      "redeemPoints": null,
+      "rewardValue": 0,
+      "redeemedPrepaidValue": 0,
+      "lineItems": [
+          {
+              "offeringType": "SERVICE",
+              "serviceId": 4862,
+              "serviceName": null,
+              "price": null,
+              "gender": null,
+              "staffId": 110,
+              "requestedStaffId": 109,
+              "startTime": "11:36",
+              "strTime": null,
+              "quantity": 1,
+              "discountPercent": 0,
+              "total": null,
+              "sku": 4890,
+              "artistShares": []
+          }
+      ],
+      "bookingStatus": "NEW",
+      "bookingNotes": "",
+      "gender": null,
+      "name": null,
+      "total": null,
+      "discountByValue": null,
+      "discountByPercent": null,
+      "isPrepaidRedemption": false,
+      "tipArtistShares": [],
+      "paymode": [
+          {
+              "id": 11,
+              "icon": "ic_cash.png",
+              "iconExt": "png",
+              "status": "ACTIVE",
+              "amount": 160,
+              "selected": null,
+              "name": "Cash"
+          }
+      ],
+      "sourceId": null,
+      "invoicePrefixId": 16
+  }
+}
+
+settings {
+  encodeUrl: true
+}

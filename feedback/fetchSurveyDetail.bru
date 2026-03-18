@@ -1,0 +1,29 @@
+meta {
+  name: fetchSurveyDetail
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{ip}}/survey/fetchSurveyDetail
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "surveyId":2,
+      "saleId":1200
+  }
+}
+
+settings {
+  encodeUrl: true
+}

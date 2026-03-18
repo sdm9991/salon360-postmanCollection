@@ -1,0 +1,28 @@
+meta {
+  name: {{ip}}/profile/getStores
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{ip}}/profile/getStores/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "shopName":"Durgesh Shop - Mig"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: pendingUnpaidCollectionDownload
+  type: http
+  seq: 49
+}
+
+post {
+  url: {{ip}}/sales/report/pendingUnpaidCollectionDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  
+      "tenureStartDate": "2025-09-10",
+      "tenureEndDate": "2025-09-14",
+      "format": "pdf"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

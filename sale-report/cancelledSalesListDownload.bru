@@ -1,0 +1,40 @@
+meta {
+  name: cancelledSalesListDownload
+  type: http
+  seq: 35
+}
+
+post {
+  url: {{ip}}/sales/report/cancelledSalesListDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "SERVICE_SALES",
+      "tenureStartDate": "2023-03-03",
+      "tenureEndDate": "2025-04-02",
+      "staffId": null,
+      "format":"pdf",
+      "bookingStatus": null,
+      "offeringTypes": [
+          "SERVICE",
+          "PACKAGE",
+          "PRODUCT",
+          "MEMBERSHIP",
+          "PREPAID_WALLET"
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

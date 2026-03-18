@@ -1,0 +1,142 @@
+meta {
+  name: v2/createNewSalesEntry
+  type: http
+  seq: 21
+}
+
+post {
+  url: {{ip}}/sales/v2/createNewSalesEntry
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "invoicePrefixId": 22,
+      "customerId": 112,
+      "membershipId": null,
+      "bookingDate": "2026-02-07 13:24:00",
+      "bookingType": "",
+      "frequency": "",
+      "endDate": null,
+      "requestType": "QUICK_SALE",
+      "redeemPoints": null,
+      "rewardValue": 0,
+      "redeemedPrepaidValue": 0,
+      "bookingStatus": "NEW",
+      "bookingNotes": "",
+      "gender": null,
+      "name": null,
+      "discountByValue": null,
+      "discountByPercent": null,
+      "tipArtistShares": [],
+      "paymode": [],
+      "isTaxApplicable": true,
+      "totalTaxList": null,
+      "totalServNetAmt": 2000,
+      "totalPkgNetAmt": 1114.2857142857142,
+      "totalProductNetAmt": 114.28571428571428,
+      "totalMembershipNetAmt": 0,
+      "totalPrepaidWalletNetAmt": 952.3809523809523,
+      "redeemedWalletValue": null,
+      "walletCreditAmount": null,
+      "sourceId": null,
+      "remark": null,
+      "otp": null,
+      "lineItems": [// new format
+          {
+              "offeringType": "SERVICE",
+              "serviceId": 1648,
+              "sku": 1648,
+              "price": 2000,
+              "startTime": "13:45",
+              "endTime": "14:45",
+              "quantity": 1,
+              "discountPercent": 0,
+              "taxGroupId": 4,
+              "artistShares": [
+                  {
+                      "empId": 249,
+                      "empName": "Akon Kimmi",
+                      "percentage": null,
+                      "selected": false
+                  }
+              ],
+              "taxList": [],
+              "isTaxInclusive": false,
+              "discountValue": null,
+              "hsnSacCodeId": 2,
+              "hsnSacCode": "HRN04040"
+          },
+          {
+              "offeringType": "PACKAGE",
+              "packageId": 46,
+              "sku": 46,
+              "actualCost": 1300,
+              "quantity": 1,
+              "discountPercent": 10,
+              "discountValue": 10,
+              "taxGroupId": 4,
+              "artistShares": [
+                  {
+                      "empId": 215,
+                      "empName": "AB DE Villiers",
+                      "percentage": null,
+                      "selected": false
+                  }
+              ],
+              "taxList": [],
+              "servicesList": [],
+              "isTaxInclusive": true
+          },
+          {
+              "offeringType": "PRODUCT",
+              "productId": 73,
+              "sku": 73,
+              "price": 120,
+              "quantity": 1,
+              "discountPercent": 0,
+              "taxGroupId": 4,
+              "artistShares": [
+                  {
+                      "empId": 215,
+                      "empName": "AB DE Villiers",
+                      "percentage": null,
+                      "selected": false
+                  }
+              ],
+              "taxList": [],
+              "isTaxInclusive": true
+          },
+          {
+              "offeringType": "PREPAID_WALLET",
+              "prepaidWalletId": 67,
+              "sku": 67,
+              "prepaidValue": 1000,
+              "quantity": 1,
+              "taxGroupId": 4,
+              "artistShares": [
+                  {
+                      "empId": 215,
+                      "empName": "AB DE Villiers",
+                      "percentage": null,
+                      "selected": true
+                  }
+              ],
+              "taxList": [],
+              "isTaxInclusive": true
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

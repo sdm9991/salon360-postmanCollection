@@ -1,0 +1,31 @@
+meta {
+  name: Store reward point history
+  type: http
+  seq: 62
+}
+
+post {
+  url: {{ip}}/sales/reward/report/store/0/100
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "searchText": "",
+      "tenureStartDate": null,
+      "tenureEndDate": null,
+      "format": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

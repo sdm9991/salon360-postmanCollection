@@ -1,0 +1,27 @@
+meta {
+  name: whatsapp-baileys/message/send-text Copy
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/whatsapp-baileys/message/send-text
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+}
+
+body:json {
+  {
+      "sessionId":"test12345",
+      "to":"918697234552",
+      "message":"Hello world"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,31 @@
+meta {
+  name: transaction/create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/sales/pettyCash/transaction/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "description":"Test email",
+      "pettyCashCategoryId": 4,
+      "amount": 200,
+      "txnDate":"2024-09-24"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

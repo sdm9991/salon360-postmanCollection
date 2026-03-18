@@ -1,0 +1,34 @@
+meta {
+  name: packagesDownload
+  type: http
+  seq: 26
+}
+
+post {
+  url: {{ip}}/sales/report/packagesDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "PACKAGE_SALES",
+      "tenureStartDate": "202-03-01",
+      "tenureEndDate": "2025-03-01",
+      "packageId": null,
+      "orderBy": null,
+      "searchText": null,
+      "format": "pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

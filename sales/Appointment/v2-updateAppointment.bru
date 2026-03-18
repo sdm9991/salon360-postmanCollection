@@ -1,0 +1,32 @@
+meta {
+  name: v2/updateAppointment
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/sales/v2/updateAppointment
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "appointmentId":2,
+    "appointmentStatus": "CANCELLED",
+    "cancelReason": "Store closed",
+    "startDate": "2026-02-10",
+    "endDate": "2026-03-10"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

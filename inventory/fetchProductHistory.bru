@@ -1,0 +1,26 @@
+meta {
+  name: fetchProductHistory
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{ip}}/inventory/product/fetchProductHistory/0/10?productId=137
+  body: json
+  auth: inherit
+}
+
+params:query {
+  productId: 137
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

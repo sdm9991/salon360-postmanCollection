@@ -1,0 +1,28 @@
+meta {
+  name: getAllPayrolls
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ip}}/profile/payroll/getAllPayrolls?employeeId=223&year=2025&month=AUGUST
+  body: json
+  auth: inherit
+}
+
+params:query {
+  employeeId: 223
+  year: 2025
+  month: AUGUST
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,31 @@
+meta {
+  name: {{ip}}/sales/reward/report/storeDownload
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{ip}}/sales/reward/report/storeDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType" : "PRODUCT_SALES",
+  
+      "format":"pdf"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

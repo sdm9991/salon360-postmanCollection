@@ -1,0 +1,59 @@
+meta {
+  name: {{ip}}/profile/addStore
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/profile/addStore
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~body: 
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "storeId": 85,
+      "shopName": "Durgesh",
+      "addressLine1": "sdfjajf",
+      "invoiceNotificationEnabled": true,
+      "invoiceNotificationChannelId": 3,
+      "customFeedbackUrl": "",
+      "gstNumber": "",
+      "timeZoneStr": "",
+      "locale": "",
+      "taxRegName": "",
+      "taxRegNumber": "",
+      "websiteUrl": "",
+      "amountRoundedOff": false,
+      "redemptionEnable": false,
+      "paymentModeAutoFilled": false,
+      "countryId": 1,
+      "openingTime": "22:13",
+      "closingTime": "16:13",
+      "halfDay": null,
+      "fullDay": null,
+      
+      "instagramUrl": "https://www.instagram.com/example",
+      "facebookUrl": "https://www.facebook.com/example",
+      "xUrl": "https://twitter.com/example",
+      "linkedinUrl": "https://www.linkedin.com/in/example",
+      "googleMapUrl": "https://goo.gl/maps/example",
+      "emailId": "abc@gmail.com",
+      "enableServiceReminder" : true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

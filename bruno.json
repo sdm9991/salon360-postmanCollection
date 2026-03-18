@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Salon360_API_COLL",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

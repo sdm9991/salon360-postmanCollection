@@ -1,0 +1,39 @@
+meta {
+  name: {{ip}}/profile//invoice/configuration/update
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/profile//invoice/configuration/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "id":7,
+      "storeId": 234,
+      "orgId": 160    ,
+      "headerMessage": null,
+      "footerMessage1": "34, Robertson Rd, Frazer Town, Bengaluru, 560005, India",
+      "footerMessage2": null,
+      "invoicePrintCustomerName": true,
+      "invoicePrintCustomerNumber": true,
+      "invoicePrintCashierName": false,
+      "invoicePrintStaffName":false,
+      "printWidth":60,
+      "printHeight":60
+  }
+}
+
+settings {
+  encodeUrl: true
+}

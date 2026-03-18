@@ -1,0 +1,62 @@
+meta {
+  name: send campaign
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://graph.facebook.com/v18.0/243475868838482/messages
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer EAAMsDSzfCtUBO3iMG2r08xvJE5x0wddN4scvwA3mmYz4NVSatFRuEJxBTJ7F2ldJxFUpIcIkdZC3aKW7THlwqtaU6o2LuxRQhvvNKeFCzZCAZAANFLPTzylCBGMos54IuipGGa5ntgnScMaJWe6rG74Ay2wZCo4p2j6qVcbpqPKME8wwunbifBsknZCenHd2XrgZDZD
+}
+
+body:json {
+  {
+      "messaging_product": "whatsapp",
+      "to": "+918055501073",
+      "type": "template",
+      "template": {
+          "name": "test_dyanamic_template_v1",
+          "language": {
+              "code": "en_US"
+          },
+          "components": [
+              {
+                  "type": "header",
+                  "parameters": [
+                      {
+                          "type": "image",
+                          "image": {
+                              "link": "https://assets.salon360app.com/notification-template-images/newambucamping-03-12-2025-20-35-22.jpeg"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "type": "body",
+                  "parameters": [
+                      {
+                          "type": "text",
+                          "text": "Salon360",
+                          "parameter_name": "store_name"
+                      },
+                       {
+                          "type": "text",
+                          "text": "120",
+                          "parameter_name": "price"
+                      }
+                  ]
+              }
+          ]
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

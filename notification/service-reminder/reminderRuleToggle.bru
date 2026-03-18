@@ -1,0 +1,32 @@
+meta {
+  name: reminderRuleToggle
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/notification/service-reminder/reminderRuleToggle?reminderRuleId=4
+  body: json
+  auth: none
+}
+
+params:query {
+  reminderRuleId: 4
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reminderRuleId":9
+  }
+}
+
+settings {
+  encodeUrl: true
+}

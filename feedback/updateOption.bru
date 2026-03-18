@@ -1,0 +1,29 @@
+meta {
+  name: updateOption
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/sales/updateOption
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "optionId": 23,
+      "updateOptionName": "excellent update"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,34 @@
+meta {
+  name: appointmentListDownload
+  type: http
+  seq: 58
+}
+
+post {
+  url: {{ip}}/sales/report/appointmentListDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "SERVICE_SALES",
+      "tenureStartDate": "2024-10-01",
+      "tenureEndDate": "2024-12-05",
+      "staffId": null,
+      "bookingStatus": null,
+      "sourceId": null,
+      "format": "pdfa"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

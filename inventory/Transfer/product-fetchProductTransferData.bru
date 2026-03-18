@@ -1,0 +1,40 @@
+meta {
+  name: product/fetchProductTransferData
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/inventory/product/fetchProductTransferData/0/10
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~transferOrderId: 22
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "query": "",
+      "transferDirection": null,
+      "transferStatus": null,
+      "transferSourceStoreId": null,
+      "transferDestinationStoreId": null,
+      "entryType": "",
+      "createdBy": "",
+      "startDate": null,
+      "endDate": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

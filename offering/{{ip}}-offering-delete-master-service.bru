@@ -1,0 +1,28 @@
+meta {
+  name: {{ip}}/offering/delete-master-service
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{ip}}/offering/delete-master-service
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "id": 33
+  }
+}
+
+settings {
+  encodeUrl: true
+}

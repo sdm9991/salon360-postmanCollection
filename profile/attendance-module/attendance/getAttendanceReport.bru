@@ -1,0 +1,30 @@
+meta {
+  name: getAttendanceReport
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{ip}}/profile/attendance/getAttendanceReport/0/10?startDate=2024-10-09&endDate=2025-10-12
+  body: json
+  auth: inherit
+}
+
+params:query {
+  startDate: 2024-10-09
+  endDate: 2025-10-12
+  ~pageNumber: 0
+  ~pageSize: 10
+  ~empId: 214
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

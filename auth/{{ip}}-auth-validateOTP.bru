@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/auth/validateOTP
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/auth/validateOTP
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "mobileNumber": "8055501073",
+      "otpOrPassword": "275e8b"//"275e8b"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

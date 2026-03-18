@@ -1,0 +1,26 @@
+meta {
+  name: product/fetchPurchaseOrderDetails
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{ip}}/inventory/product/fetchPurchaseOrderDetails?purchaseOrderId=9
+  body: json
+  auth: inherit
+}
+
+params:query {
+  purchaseOrderId: 9
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: customer/PendingSales
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{ip}}/sales/report/customer/PendingSales/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "customerId" : 179
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

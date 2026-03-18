@@ -1,0 +1,50 @@
+meta {
+  name: {{ip}}/offering/updatePackage
+  type: http
+  seq: 21
+}
+
+post {
+  url: {{ip}}/offering/updatePackage
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "packageId": 7,         
+    "packageName": "18 Dec Testing Update",          
+    "services": [                           
+      {
+        "id": 1100,
+        "quantity": 3
+      },
+      {
+        "id": 1101,
+        "quantity": 1
+      },
+      {
+        "id": 1115,
+        "quantity": 3
+      }
+    ],
+    "discountType": "Value",
+    "discountValue": 200,
+    "startDate": "2022-12-14T02:40:59",  
+    "endDate": "2023-01-23T08:39:57"
+  }
+  
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,71 @@
+meta {
+  name: product/import
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{ip}}/inventory/product/import
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "products": [
+          {
+              "imageUrl": "http://www.google.com",
+              "type": "Retail",
+              "description": "",
+              "productName": "Testing",
+              "category": "Hair",
+              "subCategory": "Cleanser",
+              "price": 120,
+              "cost": 120,
+              "taxType": "",
+              "taxGroup": "",
+              "measurement": 20,
+              "unit": "",
+              "quantity": 10,
+              "skuNumber": "SKU11",
+              "brand": "",
+              "date": "",
+              "expiryDate": "",
+              "lotNumber": "",
+              "hsnCode": ""
+          },
+          {
+              "imageUrl": "http://www.google.com",
+              "type": "Retail",
+              "description": "",
+              "productName": "Testing",
+              "category": "Hair",
+              "subCategory": "Cleanser",
+              "price": 120,
+              "cost": 120,
+              "taxType": "",
+              "taxGroup": "",
+              "measurement": 20,
+              "unit": "",
+              "quantity": 10,
+              "skuNumber": "SKU11",
+              "brand": "",
+              "date": "",
+              "expiryDate": "",
+              "lotNumber": "",
+              "hsnCode": ""
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,40 @@
+meta {
+  name: migration/import/createImportJob
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{ip}}/migration/import/createImportJob?jobType=CUSTOMER_REWARD&storeId=85&orgId=66
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  jobType: CUSTOMER_REWARD
+  storeId: 85
+  orgId: 66
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/Ayan/Downloads/customer_reward.csv)
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Generated from cURL: curl --location 'http://localhost:8765/api/migration/import/createImportJob?jobType=CUSTOMER_REWARD&storeId=85&orgId=66' \
+  --header 'x-bs-session-id: e8cee48d-cb6f-4405-a783-d709e189dbbb' \
+  --header 'x-bs-platform: Android' \
+  --header 'x-bs-app-version: 4.2.1' \
+  --form 'file=@"/C:/Users/Ayan/Downloads/customer_reward.csv"'
+}

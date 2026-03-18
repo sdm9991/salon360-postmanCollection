@@ -1,0 +1,32 @@
+meta {
+  name: serviceSalesDownload
+  type: http
+  seq: 53
+}
+
+post {
+  url: {{ip}}/sales/report/serviceSalesDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType" : "SERVICE_SALES",
+      "tenureStartDate": "2025-02-01",
+      "tenureEndDate": "2025-02-01",
+      "format":"pdfa"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,54 @@
+meta {
+  name: {{ip}}/offering/updatePackageMaster
+  type: http
+  seq: 22
+}
+
+post {
+  url: {{ip}}/offering/updatePackageMaster
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+   {
+              "packageId": 13,
+              "packageName": "Summer package",
+              "imageKey": "package-master-images/Rectangle 7817-10-07-2024-16-09-39.png",
+              "discountType": "VALUE",
+              "discountValue": 550.0,
+          
+              "serviceList": [
+                  {
+                      "id": 20,
+                    
+                      "quantity": 1
+                    
+                  },
+                  {
+                      "id": 63,
+                      
+                      "quantity": 1
+                     
+                  },
+                    {
+                      "id": 64,
+                      
+                      "quantity": 1
+                     
+                  }
+                  
+              ]
+          }
+}
+
+settings {
+  encodeUrl: true
+}

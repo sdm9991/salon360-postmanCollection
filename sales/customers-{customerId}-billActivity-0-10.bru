@@ -1,0 +1,21 @@
+meta {
+  name: customers/{customerId}/billActivity/0/10
+  type: http
+  seq: 45
+}
+
+get {
+  url: {{ip}}/sales/customers/179/billActivity/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+settings {
+  encodeUrl: true
+}

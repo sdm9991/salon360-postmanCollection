@@ -1,0 +1,22 @@
+meta {
+  name: getAllMembershipsSummary
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/store-booking/getAllMembershipsSummary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "storeId" : 85,
+      "orgId" : 66
+  }
+}
+
+settings {
+  encodeUrl: true
+}

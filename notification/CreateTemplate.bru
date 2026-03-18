@@ -1,0 +1,31 @@
+meta {
+  name: CreateTemplate
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{ip}}/notification/template/create
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "title":"Offer Template",
+  "body":"",
+  "channelId":"3",
+  "category":"offer_template"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

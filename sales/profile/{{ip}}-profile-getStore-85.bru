@@ -1,0 +1,21 @@
+meta {
+  name: {{ip}}/profile/getStore/85
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{ip}}/profile/getStore/85
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+settings {
+  encodeUrl: true
+}

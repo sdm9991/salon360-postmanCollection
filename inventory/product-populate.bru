@@ -1,0 +1,28 @@
+meta {
+  name: product/populate
+  type: http
+  seq: 36
+}
+
+post {
+  url: {{ip}}/inventory/product/populate
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "targetStoreId":178
+  }
+}
+
+settings {
+  encodeUrl: true
+}

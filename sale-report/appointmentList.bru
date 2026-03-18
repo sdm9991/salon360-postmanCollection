@@ -1,0 +1,33 @@
+meta {
+  name: appointmentList
+  type: http
+  seq: 59
+}
+
+post {
+  url: {{ip}}/sales/report/appointmentList/0/1000
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "SERVICE_SALES",
+      "tenureStartDate": "2025-01-06",
+      "tenureEndDate": "2025-02-16",
+      "staffId": null,
+      "bookingStatus": null,
+      "sourceId": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

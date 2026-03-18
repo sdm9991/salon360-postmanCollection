@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/offering/delete-service-group
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{ip}}/offering/delete-service-group
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: 9d1a47f0-ff37-48b2-b783-72d7f2da623a
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "id": "28",
+      "storeId": 46
+  }
+}
+
+settings {
+  encodeUrl: true
+}

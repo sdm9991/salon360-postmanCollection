@@ -1,0 +1,26 @@
+meta {
+  name: {{ip}}/profile/updateEmployee/154 Copy
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/profile/updateEmployee/109
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:multipart-form {
+  body: {"fName":"AB DE","lName":"Villiers","mobileNumber":"","addressLine1":"South Africa","id":215,"login":"NO","selectedStores":[85],"cProfiles":[47],"appointmentEnable":true,"payrollEnable":true,"workSchedule":[],"isShown":true,"ctcSalaryList":[],"selected":false,"profilePhotoUrl":""}
+}
+
+settings {
+  encodeUrl: true
+}

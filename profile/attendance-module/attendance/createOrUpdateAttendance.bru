@@ -1,0 +1,39 @@
+meta {
+  name: createOrUpdateAttendance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/profile/attendance/createOrUpdateAttendance
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "employeeId": 223,
+      "attendanceDate": "2025-08-10",
+      "isAbsent": false,
+      "status": "ACTIVE",
+      "isWeeklyOff" : false,
+      "attendanceType": "HALF_DAY",
+      "shifts": [
+  
+           {
+              "startTime": "19:00:00"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

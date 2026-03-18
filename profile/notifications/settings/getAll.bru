@@ -1,0 +1,28 @@
+meta {
+  name: getAll
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/profile/notification/settings/getAll
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "storeId":85
+  }
+}
+
+settings {
+  encodeUrl: true
+}

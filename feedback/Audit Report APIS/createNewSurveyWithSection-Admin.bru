@@ -1,0 +1,67 @@
+meta {
+  name: createNewSurveyWithSection-Admin
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ip}}/survey/createNewSurveyWithSection
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~sectionId: 2
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "surveyName": "Franchise Form",
+      "surveyDesc": "Franchise Form",
+      "surveyId":3,
+      "sections": [
+          // {
+          //     "sectionId": 4,
+          //     "questionIds": [
+          //        10,11,12,14
+          //     ],
+          //      "order":1
+          // },
+          // {
+          //     "sectionId": 6,
+          //     "questionIds": [
+          //        21,22
+          //     ],
+          //      "order":4
+          // }
+          // ,
+          // {
+          //     "sectionId": 6,
+          //     "questionIds": [
+          //        98
+          //     ],
+          //      "order":13
+          // },
+          // {
+          //     "sectionId": 3,
+          //     "questionIds": [
+          //       18,19
+          //     ],
+          //      "order":3
+          // }
+          
+      ]
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: submitReferralId
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{ip}}/profile/referral/submitReferralId
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "referrerCustomerId": 1241,
+    "refereeCustomerId": 1246
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,35 @@
+meta {
+  name: CreateCampaign
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/promotional/campaign
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "campName":"Test Campagin",
+      "templateId":3,
+      "segId":1,
+      "gender":"Male",
+      "offerStartDate":"2024-03-10",
+      "offerEndDate":"2024-03-15",
+      "type":"GREETING",
+      "discount":20.5
+  }
+}
+
+settings {
+  encodeUrl: true
+}

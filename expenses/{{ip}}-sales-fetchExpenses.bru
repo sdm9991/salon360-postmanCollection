@@ -1,0 +1,27 @@
+meta {
+  name: {{ip}}/sales/fetchExpenses
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/sales/fetchExpenses
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+  "searchFilter":null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

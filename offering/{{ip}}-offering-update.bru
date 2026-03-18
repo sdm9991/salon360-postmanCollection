@@ -1,0 +1,36 @@
+meta {
+  name: {{ip}}/offering/update
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{ip}}/offering/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: 9d1a47f0-ff37-48b2-b783-72d7f2da623a
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "gender":"Female",
+     "storeId": 122,
+     "serviceGroupId": 29, 
+     "service":{
+        "id":981,
+        "svcName":"Hair Cut-E-Test",
+        "description":"Hair Cut-E-Test",
+        "price":300
+     }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

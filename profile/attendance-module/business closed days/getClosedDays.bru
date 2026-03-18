@@ -1,0 +1,31 @@
+meta {
+  name: getClosedDays
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ip}}/profile/attendance/getClosedDays
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "storeId": 43,
+      "startDate": "2024-12-01",
+      "endDate": "2024-12-02",
+      "reason": "Holiday"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

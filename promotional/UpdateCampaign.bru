@@ -1,0 +1,43 @@
+meta {
+  name: UpdateCampaign
+  type: http
+  seq: 15
+}
+
+patch {
+  url: {{ip}}/promotional/campaign
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+   {"id": 1,
+          "campName": "Test Campagin-Updated",
+          "templateId": 1,
+          "occId": 11,
+          "segId": 11,
+          "gender": "Male",
+          "offerStartDate": "2024-03-10T00:00:00.000+0000",
+          "offerEndDate": "2024-03-15T00:00:00.000+0000",
+          "campScheduledDate": "2024-03-10T00:00:00.000+0000",
+          "storeId": 139,
+          "createdBy": 189,
+          "updatedBy": 281,
+          "createdDate": "2024-03-09T06:42:19.000+0000",
+          "updatedDate": "2024-03-09T07:09:55.000+0000",
+          "status": "ACTIVE",
+          "type": "CAMPAIGN",
+          "discount": 10.5
+   }
+}
+
+settings {
+  encodeUrl: true
+}

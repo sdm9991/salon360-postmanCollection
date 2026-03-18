@@ -1,0 +1,32 @@
+meta {
+  name: payModeDownload
+  type: http
+  seq: 41
+}
+
+post {
+  url: {{ip}}/sales/report/paymentModeDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType" : "PAYMENT_MODE",
+      "tenureStartDate": "2024-02-28",
+      "tenureEndDate": "2024-02-28",
+      "format":"pdf"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,72 @@
+meta {
+  name: send invoice
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://graph.facebook.com/v18.0/243475868838482/messages
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer EAAMsDSzfCtUBO3iMG2r08xvJE5x0wddN4scvwA3mmYz4NVSatFRuEJxBTJ7F2ldJxFUpIcIkdZC3aKW7THlwqtaU6o2LuxRQhvvNKeFCzZCAZAANFLPTzylCBGMos54IuipGGa5ntgnScMaJWe6rG74Ay2wZCo4p2j6qVcbpqPKME8wwunbifBsknZCenHd2XrgZDZD
+  ~Content-Type: application/json
+}
+
+body:json {
+  {
+      "messaging_product": "whatsapp",
+      "to": "919372210593",
+      "type": "template",
+      "template": {
+          "name": "referral_reward_referrer_template",
+          "language": {
+              "code": "en_US"
+          },
+          "components": [
+              {
+                  "type": "header",
+                  "parameters": [
+                      {
+                          "type": "image",
+                          "image": {
+                              "link": "https://assets.salon360app.com/static-resources/salon360_logo_v3.jpg"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "type": "body",
+                  "parameters": [
+                      {
+                          "type": "text",
+                          "text": "Test First Name Last Name"
+                      },
+                      {
+                          "type": "text",
+                          "text": "Durgesh Patidar "
+                      },
+                      {
+                          "type": "text",
+                          "text": "Durgesh Shop - Mig"
+                      },
+                      {
+                          "type": "text",
+                          "text": "40.00 wallet amount"
+                      },
+                      {
+                          "type": "text",
+                          "text": "Durgesh Shop - Mig"
+                      }
+                  ]
+              }
+          ]
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

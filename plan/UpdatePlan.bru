@@ -1,0 +1,157 @@
+meta {
+  name: UpdatePlan
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{ip}}/plan/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+    {
+                      "planId": 13,
+                      "planName": "Platinum Monthly",
+                      "planDescription": "Platinum Monthly",
+                      "planType": "PLATINUM",
+                      "planValidityUOM": "MONTHLY",
+                      "planValidity": 1,
+                      "planPrice": 2499.0,
+                      "startDate": "2024-01-30T00:00:00.000+0000",
+                      "endDate": null,
+                      "status": "ACTIVE",
+                      "createdDate": null,
+                      "updatedDate": null,
+                      "benefit": {
+                          "smsCount": 200,
+                          "waCount": 100,
+                          "emailCount": 0,
+                          "outletCount": 1
+                      },
+                      "features": [
+                          {
+                              "featureId": 6,
+                              "featureName": "Analytical Reports",
+                              "featureCode": "ANALYTICAL_REPORTS",
+                              "planId": 13,
+                              "createdDate": "2024-02-02T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 6,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 7,
+                              "featureName": "Marketing Campaigns",
+                              "featureCode": "MARKETING_CAMPAIGNS",
+                              "planId": 13,
+                              "createdDate": "2024-02-16T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 7,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 11,
+                              "featureName": "Client Feedback",
+                              "featureCode": "CLIENT_FEEDBACK",
+                              "planId": 13,
+                              "createdDate": "2024-02-16T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 11,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 12,
+                              "featureName": "Stock Management",
+                              "featureCode": "STOCK_MANAGEMENT",
+                              "planId": 13,
+                              "createdDate": "2024-02-16T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 12,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 13,
+                              "featureName": "Staff Commission Management",
+                              "featureCode": "STAFF_COMMISSION_MANAGEMENT",
+                              "planId": 13,
+                              "createdDate": "2024-02-16T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 13,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 14,
+                              "featureName": "Staff login",
+                              "featureCode": "STAFF_LOGIN",
+                              "planId": 13,
+                              "createdDate": "2024-02-16T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 14,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 19,
+                              "featureName": "Dedicated success manager",
+                              "featureCode": "DEDICATED_SUCCESS_MANAGER",
+                              "planId": 13,
+                              "createdDate": "2024-02-16T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 19,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 23,
+                              "featureName": "Support",
+                              "featureCode": "SUPPORT",
+                              "planId": 13,
+                              "createdDate": "2024-02-16T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 23,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 27,
+                              "featureName": "SMS Marketing Promotions",
+                              "featureCode": "SMS_MARKETING_PROMOTIONS",
+                              "planId": 13,
+                              "createdDate": "2024-07-09T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 27,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 28,
+                              "featureName": "WhatsApp Marketing Promotions",
+                              "featureCode": "WHATSAPP_MARKETING_PROMOTIONS",
+                              "planId": 13,
+                              "createdDate": "2024-07-09T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 28,
+                              "enable": true
+                          },
+                          {
+                              "featureId": 29,
+                              "featureName": "Free Demo & Training",
+                              "featureCode": "FREE_DEMO_TRAINING",
+                              "planId": 13,
+                              "createdDate": "2024-07-09T00:00:00.000+0000",
+                              "updatedDate": null,
+                              "order": 29,
+                              "enable": true
+                          }
+                      ]
+                  },
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: addOrUpdateServicePrice
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/offering/store-service-price/addOrUpdateServicePrice
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+    "serviceId": 4442,
+    "serviceSku": 4442,
+    "price": 300.0,
+    "cost": 120.0,
+    "duration": 45
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

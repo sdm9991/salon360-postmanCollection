@@ -1,0 +1,32 @@
+meta {
+  name: {{ip}}/sales/updateExpense
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/sales/updateExpense
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "expenseId":2,
+  "expenseCategoryId":2,
+  "payModeId":1,
+  "description":"test desc- Updted",
+  "amount":120,
+  "createdDate":"2024-01-03"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

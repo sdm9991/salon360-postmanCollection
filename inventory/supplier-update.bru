@@ -1,0 +1,41 @@
+meta {
+  name: supplier/update
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{ip}}/inventory/supplier/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+              "supplierId": 5,
+              "firstName": "Vinay",
+              "lastName": "",
+              "mobileNo": "9867731441",
+              "emailId": "",
+              "website": "",
+              "companyName": "",
+              "address": "",
+              "country": "",
+              "state": "",
+              "city": "Mumbai",
+              "pincode": null,
+              "remark": "",
+              "gstin": ""
+          }
+}
+
+settings {
+  encodeUrl: true
+}

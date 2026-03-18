@@ -1,0 +1,36 @@
+meta {
+  name: {{ip}}/offering/create
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{ip}}/offering/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "gender":"Male",
+     "storeId": 85,
+     "serviceGroupId": "35", 
+     "service":{
+        "svcName":"Hair Cut-Large-11",
+        "description":"Hair Cut-Large-11",
+        "price":500,
+        "quantity":1
+     }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

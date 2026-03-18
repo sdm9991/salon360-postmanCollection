@@ -1,0 +1,39 @@
+meta {
+  name: sales/createAndUpdateTaxGroupMaster
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/sales/createAndUpdateTaxGroupMaster
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "taxGroupId": null,
+      "taxGroupName": "GST 5%",
+      "taxMasterList": [
+          {
+              "taxId": 4
+          },
+          {
+              "taxId": 5
+          }
+      ],
+      "orgId":119,
+      "storeId":159
+  }
+}
+
+settings {
+  encodeUrl: true
+}

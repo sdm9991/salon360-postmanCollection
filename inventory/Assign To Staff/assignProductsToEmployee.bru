@@ -1,0 +1,46 @@
+meta {
+  name: assignProductsToEmployee
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/inventory/product/assignProductsToEmployee
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "employeeId": 179,
+    "products": [
+      {
+        "productId": 72,
+        "quantity": 10,
+        "notes": "Shampoo stock",
+        "lotNumber": "LOT001"
+      },
+      {
+        "productId": 2,
+        "quantity": 5,
+        "notes": "Conditioner",
+        "lotNumber": null
+      },
+      {
+        "productId": 3,
+        "quantity": 20
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

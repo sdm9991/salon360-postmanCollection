@@ -1,0 +1,31 @@
+meta {
+  name: dailyCollection
+  type: http
+  seq: 47
+}
+
+post {
+  url: {{ip}}/sales/report/dailyCollection/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType" : "SALES_LIST",
+      "tenureStartDate": "2024-09-11",
+      "tenureEndDate": "2024-11-11"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

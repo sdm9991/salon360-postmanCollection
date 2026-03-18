@@ -1,0 +1,52 @@
+meta {
+  name: {{ip}}/profile/addEmployee
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{ip}}/profile/addEmployee
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "fName": "Testing sa",
+      "lName": "Testing eleven",
+      "mobileNumber": 84848111111,
+      "ctcSalary": 15000,
+      "addressLine1": "CBG",
+      "commissionWithTarget": 10.0,
+      "commissionType": "REGULAR",
+      "salaryApplicable": "YES",
+      "empRole": "EMPLOYEE",
+      "login": "YES",
+      "selectedStores": [
+          85,
+          103
+      ],
+      "unselectedStores": [
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          122,
+          127
+      ],
+      "externalEmpId" :"abc"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

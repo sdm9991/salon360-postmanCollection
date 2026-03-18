@@ -1,0 +1,37 @@
+meta {
+  name: createCustomer
+  type: http
+  seq: 49
+}
+
+post {
+  url: {{ip}}/sales/createCustomer
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "countryId": 1,
+      "mobileNum": "88111111779101",
+      "fName": "Durgesh",
+      "lName": "Patidar",
+      "gender": "Male",
+      "emailId": "durgesh.java@gmail.com",
+      "location": "Palava City",
+      "address": "Europa F 1804",
+      "sourceId": 1289,
+      "storeId":85,
+      "orgId":66
+  }
+}
+
+settings {
+  encodeUrl: true
+}

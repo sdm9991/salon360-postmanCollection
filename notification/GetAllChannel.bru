@@ -1,0 +1,22 @@
+meta {
+  name: GetAllChannel
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{ip}}/notification/channel/getAllChannel
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

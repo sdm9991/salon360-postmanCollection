@@ -1,0 +1,30 @@
+meta {
+  name: {{ip}}/sales/filter-sales-report/0/5
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{ip}}/sales/filter-sales-report/0/5
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: 2d1db9ed-fd88-4d5d-9bba-80b690f1edcf
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "searchType":"CUSTOM", 
+     "startDate":"1/10/2022",
+     "endDate":"8/10/2022"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

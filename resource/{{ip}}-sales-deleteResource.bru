@@ -1,0 +1,27 @@
+meta {
+  name: {{ip}}/sales/deleteResource
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/sales/deleteResource
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+  "resourceId": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

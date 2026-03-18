@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/auth/authorizeAdmin
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{ip}}/auth/authorizeAdmin
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: 2d1db9ed-fd88-4d5d-9bba-80b690f1edcf
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  	"userId":9145601,
+      "password":"devRise2022@Work"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

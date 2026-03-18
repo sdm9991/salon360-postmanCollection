@@ -1,0 +1,40 @@
+meta {
+  name: saleStaffListDownLoad
+  type: http
+  seq: 33
+}
+
+post {
+  url: {{ip}}/sales/report/saleStaffListDownLoad
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": "SERVICE_SALES",
+      "tenureStartDate": "2024-03-03",
+      "tenureEndDate": "2024-03-22",
+      "format": "pdf",
+      "staffId": null,
+      "bookingStatus": null,
+      "offeringTypes": [
+          "SERVICE",
+          "PACKAGE",
+          "PRODUCT",
+          "MEMBERSHIP",
+          "PREPAID_WALLET"
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

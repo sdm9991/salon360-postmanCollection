@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/sales/customers/{{id}}/rewardPointsHistory
+  type: http
+  seq: 64
+}
+
+get {
+  url: {{ip}}/sales/customers/223/rewardPointsHistory/0/10
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~id: 
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {"customerId":179}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: uploadModifiedSalesDate
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/migration/uploadModifiedSalesDate
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/soumy/Downloads/SalonDb/updateSaleDetailsCheck.xlsx)
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,22 @@
+meta {
+  name: prepaid-wallet/getAll
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{ip}}/membership/prepaid-wallet/getAll/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

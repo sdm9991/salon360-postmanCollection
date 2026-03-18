@@ -1,0 +1,31 @@
+meta {
+  name: {{ip}}/offering/deletePackage
+  type: http
+  seq: 25
+}
+
+post {
+  url: {{ip}}/offering/deletePackage
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+   "packageId": 6
+  }
+  
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

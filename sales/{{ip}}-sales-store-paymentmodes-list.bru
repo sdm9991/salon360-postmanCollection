@@ -1,0 +1,21 @@
+meta {
+  name: {{ip}}/sales/store-paymentmodes-list
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{ip}}/sales/store-paymentmodes-list
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+settings {
+  encodeUrl: true
+}

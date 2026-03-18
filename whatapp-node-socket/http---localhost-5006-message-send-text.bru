@@ -1,0 +1,23 @@
+meta {
+  name: http://localhost:5006/message/send-text
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:5006/message/send-text
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "sessionId":"test12345",
+      "to":"918697234552rfvervrv",
+      "message":"Hello world"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

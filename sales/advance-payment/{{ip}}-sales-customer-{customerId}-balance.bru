@@ -1,0 +1,31 @@
+meta {
+  name: {{ip}}/sales/customer/{customerId}/balance
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/sales/advancePayment/customer/179/balance
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     "customerId":333, 
+     "referenceId":111,
+     "referenceType":"BOOKING",
+     "amount":33.33
+  }
+}
+
+settings {
+  encodeUrl: true
+}

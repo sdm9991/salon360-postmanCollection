@@ -1,0 +1,29 @@
+meta {
+  name: message status
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://graph.facebook.com/v18.0/243475868838482/messages
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer EAAMsDSzfCtUBO1ZAPdSFuOMxVqDGJ8FiqdCsXpPWmgyZA2XKPVplnH6XgBWRvTt5YhFF1enAZBsIxPFQaxmBDat46TymxuofsK1FeZBEYKIVJYZBHY6xGUpO4ZAeMQ86QFy865pdBva6Ct9AV9ZA2cqNy2gdJsZAkZBnMr9lJSnC4RztNnkEyPZBJqXMHdEZCmNiuRLkPyboDxS7r5gGZCCMBw7Xov7nKbTvrth5b01jOiEZD
+  ~Content-Type: application/json
+}
+
+body:json {
+  {
+  "messaging_product": "whatsapp",
+    "messages": [{ 
+      "id": "wamid.HBgMOTE4MDU1NTAxMDczFQIAERgSRTM4NkIyMzRFOTEyM0U4MEJDAA==" 
+    }]    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,42 @@
+meta {
+  name: createAppointment
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{ip}}/store-booking/createAppointment
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "storeId": 85,
+      "orgId": 66,
+      "bookingDate": "2025-05-11 22:22:17",
+      "bookingType": "ONLINE",
+      "requestType": "APPOINTMENT",
+      "mobileNumber": "8422065437",
+      "firstName": "sss",
+      "lastName": "dddd",
+      "gender":"Male",
+      "serviceVOList": [
+          {
+              "serviceId": 1648,
+              "serviceName": null,
+              "startTime": "07:00",
+              "staffId": 137,
+              "quantity": 1,
+              "sku": 1648
+          }
+      ],
+      "bookingStatus": "NEW",
+      "bookingNotes": "Online boooking",
+      "captcha":"03AFcWeA7w3I6lr61KCZxd_6JogehNRv3jar7SuFIHhzeCCiFW2LAob3Cv1abYzHvpGuvSO6Ckb4F8SpWfTO1DS45JNmMaL_PytiDHeel0uBB1VcP97vr5bZP6XHI41N7Q5FqeX2rMDFae-VYrz4GL_9QrsOQRLPhZjdawELsRg4Z49POO6waNjll5U5yO-UeppU8nL5J0RXjd7lprLgocu7hcszsTh5_6E_L4Ott93EvVdIeYxsAnoyO_3EmeVo-D2JcKpASfzVUzZ4YLztADDo_tyLELtnhwp5uorF9UCQ9FEndvQ4YV44kystxVSnOVaSfCsruaHzYkdz2gsyj2XbMTJZUETkS_CcGWQEl6zP8ox47Vb-KXdF7L340x_oj4YAIZNVur9UoWERUVWKV112W04ZaxlnjsV95Q943fjRvivl7qJ4pKPr-V83Q3qElvM9oyOhx5JCtW-uBAyHWtrfCIWe5vvkEkmjA7otzVHuAo6Uoq3n3_ICZbu-4cWPTkhWgZ8ku9J6gGo-DVljUq7SdmhTyZBtmBDGqMVm-eRUMyWaSl4HD740BdqWz0AmcaHo3wGVtx-U8PnTOVKl6aYtDxEoKNV-JmGxj53UO7mNig33qXjn0_QhiV323YcJwgpPMcD7qltHtUkKvJ8NgxjTroOgeXNHKjt9DrFf9t036XVhChj9aVggAVPPLoZXmtTadV0gPmKaDi17uJMAmUOgOQETZWkkx7ToHS4apngSu-LxzudmJs2TRFopg7br5yxG4udCQR2WlrbG5YiI7b5AHerqHi0YS8c3MxJLElH3-4yDvPG2g5DJNyrTbbkyPoms8NcwD_3GqEqCwvh7aJXygq6-wYxqnMYgtYywCNJwudWUq2RgaACuN9vPxo8cCek3fo7Z4fOXGTpucr5wq5Si96iCkuKlNI5Qi-lnkUoSmkkA7iHOY8Pbn-wOybwtkWUa9qeytXZ10K9SAqaddg3y2PWL_-MJeoDT5upEp9DjAVnr_AvzCn9sIrWDBdyfwT6ifPdJehZgPsISSwUyp-g5Ajjk0YM69zVV6IPg3aqHgmmrksOwjDePbftJlheJmnHMrEpq6K54MJFdMvIa4BKYq_-91jNVI9_dKTazIujCh3IdeedHE0XS1517mqLEX_lyTv_itYQh6HOR15fjbcMSbip1AwVLlF4gkzmpAE2iVmJ8ZPBmZ_oNqVrsMIV-gQZ-19xaIl9hpPtejCLzofLrY05EUzynlhAB-WNuG-ZnvJVWmhiSoDS_EXY1z5pLQvdfIVm2r-yXZwuQH3cDnsQatVYXCtmFG0Ir3Ukb1-YpWcKRT5_hecy8nxbejj40RRR1Oj4MquAMdxp_z29XfwwRElR7dpj-V8AowLS4oTlqFDpL8LVyzOO1R3nUkHFrIk_3zXua66bEnUJ_OudrBBDdl81RRXasKFDDTXPUvuRASfYHwX1aZFtb38SLp-Uo1RuRN94tSSS_LPs4c-Ledm6X2buypW8T4XbiWCca3HuV7efrJrKv6gc5XT2eTlhS7t3LBSipfuUq8Wg9BJyEcM_A-2WMbNYpXzrlPzYC6MQrI90FxYBo6POp5DRPp2rQgy2C-Yahxgjl_hD0x-k2o4MOpwRLARGQqJkqdgZy0ig1jH7edixTs9OP_wa4E-6Mmme-xaREIo-eCh_YOharPrvGWBvnz_vxS1n01W7NDOoYNmCsLT4XwoKuHN7viChPOPcY_eCV4nx9KotDCnHicavo-89f9G3OINReyqZWFZZnX9Sjqx357Jsrk5KR3jABZaBLKTdC_d0g8gFHXzIGOFBiKNHiuBP0w2mfbFXpMhHuTenI67yzPqGYgjas84QuqiJXXaCzNR1OAObimrhi2rxdaupLx5rs7wpFvUqX_ns7zizlVukaU5kJKz57aUKQ_B-o_ncB8A7Q2T24ihDmBqB0WlJjTDLvtgDgj_SwIL8WPqq3BBV6-ioVNytruGolToUbpmuqNxCSNnRr7oXD9X0-g_CkmC2M4wrw0EN-6b7dgBPsZA9b4JL-1ANyhoHVWXAKr_wSVfZSyXG9xuj7CF3ccwZooKTLPpZo8lgFgKyL33FMipHTg5TJPumGpikR3Uwfkx4MjNgOYBvZ0esCEOudD4DJ69YDIxcjawnok7Ut9I248ZJ3GanJw"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

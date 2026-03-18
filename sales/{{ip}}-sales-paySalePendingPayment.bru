@@ -1,0 +1,30 @@
+meta {
+  name: {{ip}}/sales/paySalePendingPayment
+  type: http
+  seq: 28
+}
+
+post {
+  url: {{ip}}/sales/paySalePendingPayment
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "saleId": 1412,
+      "amount": 1,
+      "paymentModeId": 17
+  }
+}
+
+settings {
+  encodeUrl: true
+}

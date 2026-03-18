@@ -1,0 +1,37 @@
+meta {
+  name: getEnquiries
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/profile/enquiry/getEnquiries/0/25
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "fromDate": "2025-09-01", // enquiry form fdate
+    "toDate": "2026-09-04",
+  //   "followupFromDate": "2025-09-07", //followup date filter
+  //   "followupToDate": "2025-09-08",
+    "leadStatus": null,
+    "assignedEmpId": null,
+    "gender": null,
+    "enquiryType": null,
+    "searchText": "feature 5",
+    "sourceId": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

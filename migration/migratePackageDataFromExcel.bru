@@ -1,0 +1,32 @@
+meta {
+  name: migratePackageDataFromExcel
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/migration/migratePackageDataFromExcel
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:multipart-form {
+  file: @file()
+  body: '''
+    {
+      "storeId": 631,
+    "orgId": 392,
+    "staffId":5610
+    }
+  '''
+}
+
+settings {
+  encodeUrl: true
+}

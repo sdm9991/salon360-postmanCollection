@@ -1,0 +1,29 @@
+meta {
+  name: DeleteTemplateDataKey
+  type: http
+  seq: 19
+}
+
+delete {
+  url: {{ip}}/notification/datakey/delete/1
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  
+  "name":"EMAIL"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

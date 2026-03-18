@@ -1,0 +1,39 @@
+meta {
+  name: getInvoicePrefix
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{ip}}/sales/invoice-prefixes/getInvoicePrefix
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~id: 1
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "title": "Premium Invoice",
+      "initial": "PINV",
+      "middle": "YY",
+      "separator": ".",
+      "leadingZeros": 1,
+      "isYearly": true,
+      "resetMonth": 4,
+      "resetDay": 15,
+      "isActive": false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

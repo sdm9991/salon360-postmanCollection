@@ -1,0 +1,38 @@
+meta {
+  name: {{ip}}/profile//invoice/configuration/create
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{ip}}/profile//invoice/configuration/create
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "storeId": 234,
+      "orgId": 160    ,
+      "headerMessage": null,
+      "footerMessage1": null,
+      "footerMessage2": null,
+      "invoicePrintCustomerName": true,
+      "invoicePrintCustomerNumber": true,
+      "invoicePrintCashierName": false,
+      "invoicePrintStaffName":false,
+      "printWidth":60,
+      "printHeight":60
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: v2/fetchDraftSales
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{ip}}/sales/v2/fetchDraftSales?days=90
+  body: json
+  auth: inherit
+}
+
+params:query {
+  days: 90
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

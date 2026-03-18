@@ -1,0 +1,31 @@
+meta {
+  name: validateClientApplication
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/profile/clientApplication/validateClientApplication
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      
+      "clientKey": "09879b41-d185-4073-82cb-817d6937f68a",
+      "clientSecret": "c1add561-bc5b-4d9d-854e-efb447a9d626",
+      "storeId": 10
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,56 @@
+meta {
+  name: send campaign-video
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://graph.facebook.com/v18.0/243475868838482/messages
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer EAAMsDSzfCtUBO3iMG2r08xvJE5x0wddN4scvwA3mmYz4NVSatFRuEJxBTJ7F2ldJxFUpIcIkdZC3aKW7THlwqtaU6o2LuxRQhvvNKeFCzZCAZAANFLPTzylCBGMos54IuipGGa5ntgnScMaJWe6rG74Ay2wZCo4p2j6qVcbpqPKME8wwunbifBsknZCenHd2XrgZDZD
+}
+
+body:json {
+  {
+      "messaging_product": "whatsapp",
+      "to": "+918055501073",
+      "type": "template",
+      "template": {
+          "name": "campaign_store_id_354_template_prod",
+          "language": {
+              "code": "en_US"
+          },
+          "components": [
+              {
+                  "type": "header",
+                  "parameters": [
+                      {
+                          "type": "video",
+                          "video": {
+                              "link": "https://assets.salon360app.com/notification-template-images/richart_camping_logo.mp4"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "type": "body",
+                  "parameters": [
+                      {
+                    "type":"text",
+                    "text":"Durgesh Shop - IND"
+                 }
+                  ]
+              }
+          ]
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

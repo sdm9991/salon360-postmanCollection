@@ -1,0 +1,22 @@
+meta {
+  name: deleteMembership
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{ip}}/membership/delete/13
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

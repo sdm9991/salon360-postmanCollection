@@ -1,0 +1,47 @@
+meta {
+  name: deleteCustomers Copy
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{ip}}/sales/createCustomer
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "fName": "Aallu",
+      "lName": "ArjunA",
+      "dob": "",
+      "anniversary": "",
+      "location": "",
+      "address": "",
+      "customernote": "",
+      "mobileNum": "9999991101",
+      "emailId": "",
+      "gender": "Male",
+      "gstNo": "",
+      "totalSales": 0,
+      "visitCount": 0,
+      "externalCustId": "",
+      "isTransactionalSmsEnabled": false,
+      "isTransactionalWaEnabled": false,
+      "isPromotionalSmsEnabled": false,
+      "isPromotionalWaEnabled": false,
+      "customerPrepaidWallets": [],
+      "customerMembershipId":"Ab123"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

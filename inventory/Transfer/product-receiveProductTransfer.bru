@@ -1,0 +1,39 @@
+meta {
+  name: product/receiveProductTransfer
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/inventory/product/receiveProductTransfer
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "productTransferId":3,
+      "totalReceivedCost":500,
+      "products": [
+          {
+              "productId": 177,
+              "transferQuantity": 1,
+              "receivedQuantity": 1,
+              "cost": 500
+          }
+         
+      ],
+      "remark": "returned 1 piece"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

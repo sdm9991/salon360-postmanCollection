@@ -1,0 +1,28 @@
+meta {
+  name: fetchReminder
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ip}}/notification/service-reminder/fetchReminder?reminderRuleId=1
+  body: json
+  auth: none
+}
+
+params:query {
+  reminderRuleId: 1
+  ~pageSize: 100
+  ~pageNumber: 0
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

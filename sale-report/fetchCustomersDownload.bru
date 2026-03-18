@@ -1,0 +1,33 @@
+meta {
+  name: fetchCustomersDownload
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{ip}}/sales/fetchCustomersDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "lastVisitedDateFrom": "",
+      "lastVisitedDateTo": "",
+      "totalSales": "",
+      "nameAlphabet": "",
+      "query": "",
+      "format": "pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

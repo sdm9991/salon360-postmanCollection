@@ -1,0 +1,26 @@
+meta {
+  name: update Reward point system status
+  type: http
+  seq: 9
+}
+
+patch {
+  url: {{ip}}/membership/rewardpoints/changeStatus?toggle=true
+  body: json
+  auth: inherit
+}
+
+params:query {
+  toggle: true
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

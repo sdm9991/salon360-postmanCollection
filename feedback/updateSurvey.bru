@@ -1,0 +1,33 @@
+meta {
+  name: updateSurvey
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{ip}}/sales/updateSurvey
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "surveyId": 1,
+      "surveyName" : "Feedback Form 1--1-11",
+      "surveyDesc" : "testing",
+      "questionIds" : [
+          5
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

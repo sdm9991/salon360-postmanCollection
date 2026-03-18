@@ -1,0 +1,25 @@
+meta {
+  name: makeInvoicePrefixDefault/{prefixId}
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/sales/invoice-prefixes/makeInvoicePrefixDefault/16?storeId=85
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeId: 85
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,56 @@
+meta {
+  name: productMaster/update
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{ip}}/inventory/productMaster/update
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:multipart-form {
+  body: '''
+     {
+            "productId": 43,
+            "imageKey": null,
+            "type": "Consumable",
+            "typeId": 3,
+            "productName": "Sampoo",
+            "categoryId": "1",
+            "subCategoryId": "1",
+            "price": 120.0,
+            "cost": 102.5,
+            "unitSize": 500.0,
+            "unit": "ML",
+            "quantity": 10,
+            "lowQuantity": 3,
+            "availableQty": 10,
+            "skuNumber": "SKU001",
+            "hsnCode": "123456",
+            "status": null,
+            "storeId": null,
+            "newQuantity": null,
+            "checkoutQuantity": null,
+            "discountPercent": null,
+            "artistId": null,
+            "taxId": null,
+            "taxGroupId": 1,
+            "uploadStatus": null,
+            "uploadFailureReason": null,
+            "sku": null
+        }
+  '''
+}
+
+settings {
+  encodeUrl: true
+}

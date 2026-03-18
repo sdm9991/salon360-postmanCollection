@@ -1,0 +1,22 @@
+meta {
+  name: getAllTemplateByChannelId
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{ip}}/notification/template/getAllTemplateForCampaign/1
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

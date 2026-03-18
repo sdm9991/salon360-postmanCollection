@@ -1,0 +1,47 @@
+meta {
+  name: importAttendance
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/profile/attendance/importAttendance
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {   "overWriteAllowed": false,
+      "attendances": [
+          {
+              "attendanceDate": "2024-02-01",
+              "employeeId": 223,
+              "isAbsent": false,
+              "isWeeklyOff": false,
+              "orgId": 1,
+              "shifts": [
+                  {
+                      "endTime": "13:00",
+                      "startTime": "09:00"
+                  },
+                  {
+                      "endTime": "18:00",
+                      "startTime": "14:00"
+                  }
+              ]
+          }
+      ]
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

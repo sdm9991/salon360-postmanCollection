@@ -1,0 +1,32 @@
+meta {
+  name: membershipSalesDownload
+  type: http
+  seq: 22
+}
+
+post {
+  url: {{ip}}/sales/report/membershipSalesDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "tenureStartDate": "2024-09-04",
+      "tenureEndDate": "2025-09-04",
+      "searchText":"",
+      "format": "image"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

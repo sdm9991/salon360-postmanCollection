@@ -1,0 +1,36 @@
+meta {
+  name: getAttendanceReportDownload
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{ip}}/profile/attendance/getAttendanceReportDownload
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~empId: 214
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType": null,
+      "tenureStartDate": "2024-09-11",
+      "tenureEndDate": "2025-10-11",
+      "staffId": 142,
+      "format": "pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

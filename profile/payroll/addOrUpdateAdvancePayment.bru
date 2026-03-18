@@ -1,0 +1,31 @@
+meta {
+  name: addOrUpdateAdvancePayment
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ip}}/profile/payroll/addOrUpdateAdvancePayment
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "employeeId": 110,
+      "amount": 500.00,
+      "remarks": "Advance for travel expenses",
+      "date": "2025-01-05 13:30:00"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

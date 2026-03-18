@@ -1,0 +1,32 @@
+meta {
+  name: role/update
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/profile/role/update
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+   {
+          "roleId": 11,
+          "roleName": "Staff",
+          "storeId": 39,
+          "orgId": null,
+          "loggedInUserId": null
+   }
+}
+
+settings {
+  encodeUrl: true
+}

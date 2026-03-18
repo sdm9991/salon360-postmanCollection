@@ -1,0 +1,38 @@
+meta {
+  name: test api invoice number
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/sales/invoice-prefixes/generate-invoice/test?prefixId=3&storeId=85
+  body: json
+  auth: inherit
+}
+
+params:query {
+  prefixId: 3
+  storeId: 85
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "initial": "TEST",
+      "isYearly": true,
+      "existingCount": 25,
+       "middle": "YY",
+      "leadingZeros": 1,
+      "lastInvoiceDate": "2024-01-01",
+      "currentDate": "2024-01-01"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

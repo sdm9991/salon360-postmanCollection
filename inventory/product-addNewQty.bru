@@ -1,0 +1,37 @@
+meta {
+  name: product/addNewQty
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{ip}}/inventory/product/addNewQty
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "products": [
+          {
+              "productId": 4,
+              "quantity": 10
+          },
+          {
+              "productId": 5,
+              "quantity": 10
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

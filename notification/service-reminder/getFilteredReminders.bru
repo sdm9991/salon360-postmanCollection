@@ -1,0 +1,37 @@
+meta {
+  name: getFilteredReminders
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/notification/service-reminder/getFilteredReminders/0/10
+  body: json
+  auth: none
+}
+
+params:query {
+  ~pageNumber: 0
+  ~pageSize: 10
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "filterBy": "rule", // RULE/SERVICE/CUSTOMER
+      // "reminderRuleId": null,
+      // "searchText": "25082", //service id
+      "startDate": "2024-10-04",
+      "endDate": "2026-11-10"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/sales/createResource
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ip}}/sales/createResource
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+  "name": "Room 3",
+  "description": "Room 3" ,
+  "storeId":159
+  }
+}
+
+settings {
+  encodeUrl: true
+}

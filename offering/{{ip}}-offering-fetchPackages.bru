@@ -1,0 +1,26 @@
+meta {
+  name: {{ip}}/offering/fetchPackages
+  type: http
+  seq: 23
+}
+
+post {
+  url: {{ip}}/offering/fetchPackages
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}

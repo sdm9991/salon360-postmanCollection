@@ -1,0 +1,30 @@
+meta {
+  name: whatsAppSummaryReport
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{ip}}/promotional/whatsAppSummaryReport
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "channelId":3,
+  "startDate":"2024-05-01",
+  "endDate":"2024-06-26"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

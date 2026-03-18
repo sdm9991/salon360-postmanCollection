@@ -1,0 +1,26 @@
+meta {
+  name: {{ip}}/profile/place/autocomplete?input=palava
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ip}}/profile/place/autocomplete?input=palava
+  body: none
+  auth: inherit
+}
+
+params:query {
+  input: palava
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

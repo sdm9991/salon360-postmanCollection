@@ -1,0 +1,36 @@
+meta {
+  name: importCustomerRewardPointData
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{ip}}/migration/importCustomerRewardPointData
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "storeId": 85,
+      "orgId": 66,
+      "customers": [
+         {
+      "mobileNum": "9152077793",
+      "fName": "Roshani",
+      "gender": "Female",
+      "customerRewardPointBalance": 4000
+    }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

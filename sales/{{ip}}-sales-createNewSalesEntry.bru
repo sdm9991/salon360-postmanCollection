@@ -1,0 +1,100 @@
+meta {
+  name: {{ip}}/sales/createNewSalesEntry
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{ip}}/sales/createNewSalesEntry
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "invoicePrefixId": 22,
+      "rewardRuleId":7, //for referral ( todo )
+      "referrerId": 29465, //
+      "customerId": 112,
+      "membershipId": null,
+      "bookingDate": "2026-01-29 14:02:00",
+      "bookingType": "",
+      "frequency": "",
+      "endDate": "",
+      "requestType": "QUICK_SALE",
+      "redeemPoints": null,
+      "rewardValue": 0,
+      "redeemedPrepaidValue": 0,
+      "pkgServiceVOList": [],
+      "serviceVOList": [],
+      "packageVOList": [],
+      "productVOList": [
+          {
+              "productId": 73,
+              "sku": 73,
+              "price": 120,
+              "staffId": null,
+              "startTime": null,
+              "strTime": null,
+              "quantity": 1,
+              "discountPercent": 0,
+              "total": null,
+              "taxGroupId": 4,
+              "artistShares": [
+                  {
+                      "empId": 215,
+                      "empName": "AB DE Villiers",
+                      "percentage": null,
+                      "selected": false
+                  }
+              ],
+              "taxList": [],
+              "discountAmt": null,
+              "discountedPrice": null,
+              "taxAmt": null,
+              "subTotal": null,
+              "skuNumber": null,
+              "isTaxInclusive": true,
+              "discountValue": null,
+              "hsnSacCodeId": null,
+              "hsnSacCode": null,
+              "lotNumber":"1234"
+  
+          }
+      ],
+      "membershipVOList": [],
+      "prepaidWalletList": [],
+      "bookingStatus": "NEW",
+      "bookingNotes": "",
+      "gender": null,
+      "name": null,
+      "total": null,
+      "discountByValue": null,
+      "discountByPercent": null,
+      "isPrepaidRedemption": false,
+      "tipArtistShares": [],
+      "paymode": [],
+      "sourceId": null,
+      "remark": null,
+      "otp": null,
+      "totalServNetAmt": 0,
+      "totalPkgNetAmt": 0,
+      "totalProductNetAmt": 114.28571428571428,
+      "totalMembershipNetAmt": 0,
+      "totalPrepaidWalletNetAmt": 0,
+      "redeemedWalletValue": null,
+      "walletCreditAmount": null,
+      "isTaxApplicable": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

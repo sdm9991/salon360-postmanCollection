@@ -1,0 +1,37 @@
+meta {
+  name: creditOrDebitCustomerRewardPointData
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{ip}}/migration/creditOrDebitCustomerRewardPointData
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "storeId": 85,
+      "orgId": 66,
+      "transactionType": "CREDIT",
+      "customers": [
+         {
+      "mobileNum": "8055501073",
+      "fName": "Durgesh",
+      "gender": "Male",
+      "customerRewardPointBalance": "3000"
+    }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

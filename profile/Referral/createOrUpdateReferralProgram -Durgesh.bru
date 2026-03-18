@@ -1,0 +1,48 @@
+meta {
+  name: createOrUpdateReferralProgram -Durgesh
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ip}}/profile/referral/createOrUpdateReferralProgram
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Refer & Earn",
+    "description": "Get rewards for referring friends",
+    "isEnable": true,
+    "rewardRules": [
+      {
+      
+        "rewardType": "REWARD_POINTS",
+        "rewardTo": "REFEREE",
+        "rewardConfigJson": "{\"reward\":{\"type\":\"REWARD_POINTS\",\"strategy\":\"PERCENT_OF_INVOICE\",\"value\":50}}"
+      },
+      {
+        "rewardType": "REWARD_POINTS",
+        "rewardTo": "REFERRER",
+        "rewardConfigJson": "{\"reward\":{\"type\":\"REWARD_POINTS\",\"strategy\":\"FIXED_VALUE\",\"value\":50}}"
+      },
+      {
+        "rewardType": "WALLET",
+        "rewardTo": "REFERRER",
+        "rewardConfigJson": "{\"reward\":{\"type\":\"WALLET\",\"strategy\":\"FIXED_VALUE\",\"value\":50}}"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

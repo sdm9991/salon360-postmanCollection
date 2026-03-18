@@ -1,0 +1,24 @@
+meta {
+  name: http://localhost:5006/message/send-video
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:5006/message/send-video
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "sessionId": "test12345",
+      "to": "918697234552",
+      "videoUrl": "https://assets.salon360app.com/notification-template-images/lujo_mainson_campaign.mp4",
+      "caption": "Check this out!"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

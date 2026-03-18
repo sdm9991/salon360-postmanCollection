@@ -1,0 +1,31 @@
+meta {
+  name: {{ip}}/offering/update-master-group
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{ip}}/offering/update-master-group
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  	"id":111,
+      "groupName":"Beauty Services",
+      "description":"Beauty Services",
+      "imageKey":"service-category-master-images/Rectangle 7801-10-07-2024-16-01-41.png"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,51 @@
+meta {
+  name: {{ip}}/offering/update-service-group
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{ip}}/offering/update-service-group
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "id": 52,
+      "sgName": "22 April Durgesh P Group-updated",
+      "serviceList": [
+          {
+              "id": 1270,
+              "svcName": "Durgsh S",
+              "description": "Hair Cut-large-11-updated",
+              "gender": "Female",
+              "price": 500,
+              "gst": true
+          }
+      ],
+      "products": [
+          {
+              "productId": 4,
+              "volume": 30
+          },
+          {
+              "productId": 5,
+              "volume": 30
+          }
+      ],
+      "description": null,
+      "status": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

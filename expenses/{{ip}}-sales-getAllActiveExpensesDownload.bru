@@ -1,0 +1,29 @@
+meta {
+  name: {{ip}}/sales/getAllActiveExpensesDownload
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/sales/getAllActiveExpensesDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      "fromDate":"2023-09-27",
+      "toDate":"2025-09-27",
+      "format":"pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

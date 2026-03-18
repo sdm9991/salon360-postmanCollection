@@ -1,0 +1,23 @@
+meta {
+  name: whatsapp-baileys/session/create?sessionId=test12345
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{ip}}/whatsapp-baileys/session/create?sessionId=85_e8ed1ef8-b942-49de-b0d6-09dabb3dacbe2
+  body: json
+  auth: none
+}
+
+params:query {
+  sessionId: 85_e8ed1ef8-b942-49de-b0d6-09dabb3dacbe2
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: CreatetemplateData
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{ip}}/notification/template/create
+  body: json
+  auth: none
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  "title":"Test Notification Email for Recharge ",
+  "body":"Hello {{user_id}},\n Please recharge your plan for Store {{store_name}} as its going to expire soon.\nThanks",
+  "channelId":"1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

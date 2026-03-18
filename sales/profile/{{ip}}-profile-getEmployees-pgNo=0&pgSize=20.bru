@@ -1,0 +1,27 @@
+meta {
+  name: {{ip}}/profile/getEmployees?pgNo=0&pgSize=20
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{ip}}/profile/getEmployees?pgNo=0&pgSize=20
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pgNo: 0
+  pgSize: 20
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

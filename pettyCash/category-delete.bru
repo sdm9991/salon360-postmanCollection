@@ -1,0 +1,30 @@
+meta {
+  name: category/delete
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{ip}}/sales/pettyCash/category/delete/8
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "id":8,
+      "pettyCashCategoryName": "Loan Given New",
+      "paymentFlowType": "OUT"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

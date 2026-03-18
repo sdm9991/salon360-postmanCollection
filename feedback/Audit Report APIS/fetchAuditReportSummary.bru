@@ -1,0 +1,33 @@
+meta {
+  name: fetchAuditReportSummary
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{ip}}/survey/fetchAuditReportSummary/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+     
+      "tenureStartDate": "2025-06-10",
+      "tenureEndDate": "2025-08-10",
+      "format": null,
+      "stars": null,
+      "searchText":  "Radiance Beauty Lounge" // salon name
+  }
+}
+
+settings {
+  encodeUrl: true
+}

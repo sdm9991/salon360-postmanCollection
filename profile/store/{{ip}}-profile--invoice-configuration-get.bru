@@ -1,0 +1,31 @@
+meta {
+  name: {{ip}}/profile//invoice/configuration/get
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{ip}}/profile//invoice/configuration/get
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+}
+
+body:json {
+  {
+      
+      "storeId": 211,
+      "orgId": 140
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

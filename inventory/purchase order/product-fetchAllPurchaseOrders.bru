@@ -1,0 +1,27 @@
+meta {
+  name: product/fetchAllPurchaseOrders
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ip}}/inventory/product/fetchAllPurchaseOrders?status=RECEIVED
+  body: json
+  auth: inherit
+}
+
+params:query {
+  status: RECEIVED
+  ~supplierId: 2
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

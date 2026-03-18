@@ -1,0 +1,31 @@
+meta {
+  name: Store Balance Report Export
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{ip}}/sales/report/saleByLocationExport
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType" : "STORE_BALANCE_REPORT",
+      "tenureStartDate" : "2023-10-11",
+      "tenureEndDate" : "2024-11-15"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

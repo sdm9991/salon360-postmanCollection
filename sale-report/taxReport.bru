@@ -1,0 +1,31 @@
+meta {
+  name: taxReport
+  type: http
+  seq: 38
+}
+
+post {
+  url: {{ip}}/sales/report/taxReport/0/10
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "reportType" : "TAX_REPORT",
+      "tenureStartDate": "2025-09-01",
+      "tenureEndDate": "2025-12-04"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

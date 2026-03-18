@@ -1,0 +1,31 @@
+meta {
+  name: customers/balancesDownload
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{ip}}/sales/advancePayment/customers/balancesDownload
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-bs-session-id: {{x-bs-session-id}}
+  x-bs-platform: Android
+  x-bs-app-version: 4.2.1
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "searchText": "",
+      "tenureStartDate": null,
+      "tenureEndDate": null,
+      "format": "image"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
