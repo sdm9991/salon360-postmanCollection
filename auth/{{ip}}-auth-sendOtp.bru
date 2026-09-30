@@ -26,4 +26,60 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: example
+  
+  request: {
+    url: {{ip}}/auth/sendOtp
+    method: POST
+    mode: json
+    headers: {
+      x-bs-platform: 4.2.1
+      x-bs-app-version: Andriod
+      Content-Type: application/json
+      ~x-bs-session-id: 
+    }
+  
+    body:json: {
+      {
+          "mobileNo": "8055501073",
+          "flow": "login"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      server: nginx
+      date: Wed, 18 Mar 2026 20:52:30 GMT
+      content-type: application/json;charset=UTF-8
+      transfer-encoding: chunked
+      connection: keep-alive
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "responseCode": "200",
+          "responseMessage": "OK",
+          "successOTP": null,
+          "key": "f1076b73-0103-43f7-8dc3-d60da4174092",
+          "existing": true,
+          "role": null,
+          "organization_map": null,
+          "loginType": "PASSWORD",
+          "owner": false
+        }
+      '''
+    }
+  }
 }
